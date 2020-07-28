@@ -1,8 +1,8 @@
 @charset "utf-8";
 
 /*헤더구역, 풋터구역 등 기타 공통구역에 대한 스타일*/
-body {background: cadetblue;}
-#header { background-color:darkkhaki;}
+
+#header {background-color: tomato;}
 .row {
     max-width: 1300px;
     margin: 0 auto;
@@ -55,9 +55,8 @@ body {background: cadetblue;}
     display: block;
     position: absolute;
     top: 100%;
-    width: 100%;
+    width: 100%;    
 }
-
 .logoNav .nav .depth1 > li > a {
     font-size: 16px;
     color: #fff;
@@ -69,11 +68,14 @@ body {background: cadetblue;}
 .logoNav .nav .depth1 > li a:hover {
     color:#0099d2;
     transition: all 0.5s;
+    
 }
 .logoNav .nav .depth2 {
     display: none;
 }
-
+.logoNav .nav .depth2 > li{
+    animation:fadeInUp 0.5s both 1
+}
 .logoNav .nav .depth2 > li > a {
     display:block;
     font-size: 14px;
