@@ -2,7 +2,8 @@
 
 /*헤더구역, 풋터구역 등 기타 공통구역에 대한 스타일*/
 
-#header {background-color: tomato;}
+#header {background-color: tomato;
+    }
 .row {
     max-width: 1300px;
     margin: 0 auto;
@@ -42,6 +43,7 @@
     position: absolute;
     top: 55%; right: 50px;
     transform: translateY(-50%);
+    z-index: 99999;
 }
 .logoNav .nav .depth1 > li {
     display: inline-block;
@@ -68,7 +70,6 @@
 .logoNav .nav .depth1 > li a:hover {
     color:#0099d2;
     transition: all 0.5s;
-    
 }
 .logoNav .nav .depth2 {
     display: none;
@@ -87,20 +88,21 @@
 }
 .logoNav .nav .depth2 > li > a:hover {
     background:rgba(31, 31, 31, 0.76);
-    color:#fff
+    color:#fff;
 }
 
 
 .slide {
-    width: 1920px;
-    height: 1080px;
+    width: 100%;
+    height: 950px;
     overflow: hidden;
 }
 .slide .slideInner {
     background-size: cover;
     background-repeat: no-repeat;
-    height: 1080px;
+    height: 950px;
     background-position: center;
+    position: relative;
 }
 .slide .slideInner:nth-child(1)
 {background-image: url(../images/main_metapo02.jpg);}
@@ -108,5 +110,26 @@
 {background-image: url(../images/main_metapo03.jpg);}
 .slide .slideInner:nth-child(3)
 {background-image: url(../images/main_metapo01.jpg);}
-
-
+.slide .slideInner .text {
+    position: absolute;
+    top:50%; left: 0%;
+    transform: translateY(-50px);
+    text-align: center;
+    display: inline-block;
+    width: 100%;
+}
+.slide .slideInner .text h2 {
+    font-size: 64.8px;
+    color: #fff;
+    padding: 0px 55px 35px;
+}
+.slide .slideInner .text h3 {
+    font-size: 86.4px;
+    color:#fff;
+    padding:0 25px;
+}
+.slide .slideInner .text h4 {
+    font-size: 32.4px;
+    color:#fff;
+    margin:0 0 100px;
+}
