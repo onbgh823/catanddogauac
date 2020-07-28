@@ -89,3 +89,24 @@
     background:rgba(31, 31, 31, 0.76);
     color:#fff
 }
+
+
+.slide {
+    width: 1920px;
+    height: 1080px;
+    overflow: hidden;
+}
+.slide .slideInner {
+    background-size: cover;
+    background-repeat: no-repeat;
+    height: 1080px;
+    background-position: center;
+}
+.slide .slideInner:nth-child(1)
+{background-image: url(../images/main_metapo02.jpg);}
+.slide .slideInner:nth-child(2)
+{background-image: url(../images/main_metapo03.jpg);}
+.slide .slideInner:nth-child(3)
+{background-image: url(../images/main_metapo01.jpg);}
+
+
