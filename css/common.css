@@ -1,0 +1,57 @@
+@charset "utf-8";
+
+/*헤더구역, 풋터구역 등 기타 공통구역에 대한 스타일*/
+body {background: burlywood;}
+#header {
+    /* background: black; */
+}
+.row {
+    max-width: 1300px;
+    margin: 0 auto;
+}
+.topmenu .row { 
+    position: relative;
+}
+.topmenu {
+    background:#0099d2;
+    color: #e8e8e8;
+    padding: 10px 15px;
+}
+.topmenu .login a {
+    padding:0px 5px 0px 15px ;
+    font-size: 14px;
+    font-weight: bold;
+}
+.topmenu .login a:hover {
+    color: #fff;
+}
+.topmenu .sns {
+    position: absolute;
+    top: 55%; right: 20px;
+    transform: translateY(-55%);
+
+}
+.topmenu .sns a {
+    display: inline-block;
+    font-size: 25px;
+    border-radius: 10px;
+}
+.topmenu .sns a:hover {
+    color: #fff;
+} 
+.logoNav {position: relative;}
+.logoNav .nav {
+    position: absolute;
+    top: 50%; right: 0;
+    transform: translateY(-50%);
+}
+.logoNav .nav .depth1 > li {
+    display: inline-block;
+}
+.logoNav .nav .depth1 > li > a {
+    font-size: 16px;
+    color: #fff;
+    text-align:center;
+    display:block;
+    font-weight: bold;
+}
