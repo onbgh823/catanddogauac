@@ -74,7 +74,7 @@
     display: none;
 }
 .logoNav .nav .depth2 > li{
-    animation:fadeInUp 0.5s both 1
+    animation:fadeInUp 0.5s both 1;
 }
 .logoNav .nav .depth2 > li > a {
     display:block;
