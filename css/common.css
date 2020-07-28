@@ -123,12 +123,16 @@
     width: 100%;
     font-family: '나눔고딕';
     padding-top: 50px;
+    display: inline-block;
+
 }
 .slide .slideInner .text h2 {
     font-size: 57px;
     color: #fff;
-    padding: 0px 55px 50px;
+    padding: 0px 55px 35px;
     position: relative;
+    display: inline-block;
+
 }
 .slide .slideInner .text h2:after {
     content:''; width:300px; 
@@ -136,19 +140,27 @@
     background:#fff;
     position:absolute; bottom:0;
     left:50%; margin-left: -150px;
+    display: inline-block;
+
 }
 .slide .slideInner .text h3 {
     font-size: 76px;
     color:#fff;
     padding: 25px 0px;
     margin:0 0 15px;
+    display: inline-block;
     background-image: linear-gradient(90deg,rgba(255,255,255,0.00) 0%,rgba(255,255,255,0.20) 24.35%,rgba(255,255,255,0.20) 79.27%,rgba(255,255,255,0.00) 100%);
 }
 .slide .slideInner .text h4 {
     font-size: 28.5px;
     color:#fff;
     margin:0 0 100px;
+    display: inline-block;
+
     
 }
-
-
+.pic4menu {padding: 60px 0;}
+.pic4menu > .column {
+    float: left;
+    width: 48%;
+}
