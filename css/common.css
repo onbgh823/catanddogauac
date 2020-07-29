@@ -319,7 +319,7 @@
     padding-bottom: 25px;
 
 }
-.icon {position: relative;}
+.icon li > a {display: block;}
 .icon li{
     width: 24.5%;
     display: inline-block;
@@ -335,7 +335,7 @@
     margin: 0 106px;
     font-size: 43px;
 }
-.icon li .icon_bell > div {
+/* .icon li .icon_bell > div {
     width: 100px; height: 100px;
     background: #fff;
     border-radius: 50%;
@@ -364,7 +364,7 @@
     color:#0099d2;
     margin: 0 106px;
     font-size: 43px;
-}
+} */
 .icon h2 {
     font-size: 21px;
     margin: 15px 0px;
@@ -373,5 +373,12 @@
 .icon p {
     font-size: 14px;
     margin: 0px 0px 10px ;
+    color: #fff;
+    
+}
+.icon a:hover div > i { 
+    color:#333;
+}
+.icon a:hover div > h2 {
     color: #fff;
 }
