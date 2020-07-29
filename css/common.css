@@ -405,3 +405,123 @@
     display: block;
     text-align: center;
 }
+
+/* =============================================== */
+.banner {
+    height: 500px;
+    background-image: url(../images/banner_bg01.jpg);
+    position: relative;
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+}
+.banner .text {
+    display: inline-block;
+    text-align: center;
+    color:#fff;
+    position: absolute;
+    top: 50%; left: 50%;
+    transform: translate(-50%, -50%);
+}
+.banner .text h1 {
+    font-size: 55.44px;
+}
+.banner .text h2 {
+    font-size: 45.58px;
+}
+.banner .text h3 {
+    font-size: 20.79px;
+}
+/* ==============================================*/
+.product {
+    padding: 60px 15px;
+}
+.product h1 {
+    font-size: 38px;
+    color: #3a3a3a;
+    text-align: center;
+}
+.product h2 {
+    font-size: 16px;
+    color: #3a3a3a;
+    text-align: center;
+    position: relative;
+    padding-bottom: 25px;
+}
+.product h2:after {
+    content: '';width: 60px;
+    height: 2px;
+    position: absolute;
+    bottom: 0; left: 50%;margin-left: -30px;
+    background: #1f1f1f;
+}
+.product_list li {
+    width: 24.65%;
+    display: inline-block;
+    padding: 50px 10px 0px;
+}
+.product_list li img {width: 100%;}
+.product_list li span {
+    text-align: center;
+    display: block;
+    color: #6e6e6e;
+    padding: 5px 0;
+    margin:5px 0;
+    border: 1px solid #fff;
+    transition: all 0.5s;
+}
+
+.product_list li a img:hover {
+    opacity: 0.7; transition: all 0.5s;
+}
+.product_list li img:hover +span {
+    background: rgba(199,22,45,1.00);
+    color: #fff;
+}
+.product_list li a > span:hover {
+    background: rgba(199,22,45,1.00);
+}
+/* ========================================== */
+.sitemenu_box {
+    height: 168px;
+    background: #1f1f1f;
+    padding: 20px 0;
+    position: relative;
+}
+.sitemenu {
+    text-align: center;
+}
+.sitemenu .depth1 {position: relative;}
+.sitemenu .depth1 > li {
+    display:inline-block;
+    color:#fff;
+    padding: 15px 0px;
+    width: 15%;
+    font-size: 14px;
+    font-weight: bold;
+    /* border-bottom: 1px solid #fff; */
+    
+}
+.sitemenu .depth1 li:hover {
+    background:#000
+}
+.sitemenu .depth1 > li {position: relative;}
+.sitemenu .depth1 > li:after {
+    content: "";width: 60px;
+    height: 2px;
+    position: absolute;
+    bottom: 0; left: 50%;margin-left: -30px;
+    background: #fff
+}
+.sitemenu .depth2 {position: absolute;
+     top:100%; left: 0; width: 100%;}
+.sitemenu .depth2 > li {
+     /* display: inline-block; */
+     text-align: center;
+}
+.sitemenu .depth2 > li > a {
+    display: block;
+    font-size: 12px;
+    text-align: center;
+    padding: 5px 0px;
+}
