@@ -3,7 +3,7 @@
     -moz-box-sizing: border-box;
     -webkit-box-sizing: border-box;
     box-sizing: border-box; }
-a { color:inherit; text-decoration:none }
+a { color:inherit; text-decoration:none;}
 
 /* 이미지 넓이값은 필요한 곳에서 width:100% 설정할 것 */
 img { vertical-align:middle; 
@@ -61,4 +61,4 @@ strong, th { font-weight:normal }
     padding:10px 0px; position:fixed;
     top:0px; z-index:9999999; } 
 
-
+ 

@@ -382,3 +382,26 @@
 .icon a:hover div > h2 {
     color: #fff;
 }
+
+/* ========================================== */
+
+.item_list {padding: 60px 15px;}
+.item_list p {
+    font-size: 28px;
+    padding: 0 0 40px;
+    text-align: center;
+}
+.profile_list li {
+    display: inline-block;
+    width: 22.5%;
+    margin:1% 1%;
+}
+.profile_list li img {width: 100%;}
+.profile_list li a > span {
+    display: block;
+    text-align: center;
+}
+.profile_list li > span{
+    display: block;
+    text-align: center;
+}
