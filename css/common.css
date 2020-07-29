@@ -114,6 +114,7 @@
 {background-image: url(../images/main_metapo03.jpg);}
 .slide .slideInner:nth-child(3)
 {background-image: url(../images/main_metapo01.jpg);}
+
 .slide .slideInner .text {
     position: absolute;
     top:50%; left: 0%;
@@ -128,9 +129,9 @@
 .slide .slideInner .text h2 {
     font-size: 57px;
     color: #fff;
-    padding: 0px 55px 35px;
+    padding-bottom: 50px;
     position: relative;
-
+    
 }
 .slide .slideInner .text h2:after {
     content:''; width:300px; 
@@ -144,18 +145,165 @@
     font-size: 76px;
     color:#fff;
     padding: 25px 0px;
-    margin:0 0 15px;
-    background-image: linear-gradient(90deg,rgba(255,255,255,0.00) 0%,rgba(255,255,255,0.20) 24.35%,rgba(255,255,255,0.20) 79.27%,rgba(255,255,255,0.00) 100%);
+    margin:30px 0 ;
+    background-image: linear-gradient(90deg,rgba(255,255,255,0.00) 0%,
+    rgba(255,255,255,0.20) 24.35%,rgba(255,255,255,0.20) 79.27%,
+    rgba(255,255,255,0.00) 100%);
 }
 .slide .slideInner .text h4 {
     font-size: 28.5px;
     color:#fff;
     margin:0 0 100px;
-
-    
 }
-.pic4menu {padding: 60px 0;}
+#section .backcolor {background:tomato}
+.pic4menu {padding: 60px 0px;
+    /* background: greenyellow; */
+}
 .pic4menu > .column {
     float: left;
-    width: 48%;
+    width:47%;
+    /* padding: 15px 0px; */
+    position: relative;
+    
+    
 }
+.column div:first-child {
+    margin-bottom: 15px;    
+}
+.column .white:hover::after {
+    content: ''; position: absolute;
+    top: 0 ; left: 0; right: 0; bottom: 0;
+    background: rgba(0,0,0,0.45);}
+
+.column .dark:after {
+    content: ''; position: absolute;
+    top: 0 ; left: 0; right: 0; bottom: 0;
+    background: rgba(0,0,0,1);
+}
+.column .dark:hover:after {
+    content: ''; position: absolute;
+    top: 0 ; left: 0; right: 0; bottom: 0;
+    background:rgba(0,0,0,0.5);
+}
+
+.pic4menu > .column:nth-child(2) {margin: 0 1.5%;}
+.pic4menu img {width: 100%;}
+.pic4menu > .column > div {
+    position: relative;}
+.pic4menu .overlay {
+    position: absolute;
+    top: 50% ; left: 0; right: 0; bottom: 0;
+    transform: translateY(-50%);
+    z-index: 99999;
+}
+.column .overlay .copy {
+    display: block;
+    color: rgba(255,255,255,0.7);
+    text-align: center;
+    line-height: 1.5;
+    
+}
+.column .overlay .copy h1 {font-size: 26.775px;}
+.column .overlay .copy p {margin-bottom: 70px;}
+.column .overlay .copy span {
+    background: rgba(0, 0, 0, 0.25);
+    border: 1px solid #fff;
+    padding: 5px 35px;  
+    transition: all 0.5s;
+    font-weight: bold;
+}
+.column .overlay .copy span:hover {
+    background: rgba(255,255,255,0.45);
+}
+.column div:hover img,
+.column div:hover h1,
+.column div:hover p {transform: scale(1.1);}
+
+.column >div {height: 280px;
+    overflow: hidden;}
+
+
+
+
+
+
+.cscenter {
+    padding: 60px 0;
+    /* background: green; */
+}
+.cscenter >div {float: left;}
+.cscenter .board {
+    width: 31.5%; 
+    /* background: rgb(201, 201, 25) */
+}
+.cscenter .board .tabTit {position: relative;}
+.cscenter .board .tabTit a {display: inline-block;}
+
+.cscenter .board .tabTit a:nth-child(1) {
+    font-size: 22px;
+    color: #3a3a3a;
+    position: relative;
+    padding-bottom: 15px;
+}
+.cscenter .board .tabTit a:nth-child(1):after {
+    content: "";
+    position: absolute;
+    width: 60px;
+    height: 2px;
+    bottom: 2px;
+    left: 0px;
+    background-color: #131d1d;
+    
+}
+.cscenter .board .tabTit a:nth-child(2) {
+    font-size: 14px;
+    color: #A80632;
+    padding-bottom: 30px;
+    
+}
+.cscenter .board .tabTit a:nth-child(3) {
+    font-size: 12px;
+    color: #fff;
+    background: #707070;
+    padding: 1px 5px ;
+    border: 1px solid #707070;
+    position: absolute;
+    top: 100; right: 0;
+}
+.cscenter .board .tabCont td a:before {content:'ㆍ';}
+.cscenter .board .tabCont td {
+    font-size: 14px;
+    color: #6e6e6e;
+    white-space: nowrap; 
+    overflow:hidden; 
+    text-overflow: ellipsis;
+    line-height: 1.8;
+}
+.cscenter .board .tabCont td:last-child {
+    padding-left: 80px;
+}
+
+.youtube {
+    float: left;
+    width: 31.5%;
+    margin: 0 2.5%;
+}
+.youtube .box {
+    position: relative;
+    padding-top: 56.25%;
+}
+.youtube .box iframe {
+    position: absolute;
+    top: 0; left: 0;
+    width: 100%; height: 100%;
+}
+.contact {
+    float: left;
+    width: 31.5%;
+    padding: 20px 0;
+}
+.contact > .contact_box {
+}
+
+
+/* .pic4menu > .column:nth-child(2) {margin: 0 1.5%;} */
