@@ -500,17 +500,16 @@
     font-size: 14px;
     font-weight: bold;
     /* border-bottom: 1px solid #fff; */
-    
 }
-.sitemenu .depth1 li:hover {
-    background:#000
+.sitemenu .depth1 > li:hover {
+    background:#000;
 }
 .sitemenu .depth1 > li {position: relative;}
 .sitemenu .depth1 > li:after {
     content: "";width: 60px;
     height: 2px;
     position: absolute;
-    bottom: 0; left: 50%;margin-left: -30px;
+    bottom: 6px; left: 50%;margin-left: -30px;
     background: #fff
 }
 .sitemenu .depth2 {position: absolute;
@@ -524,4 +523,8 @@
     font-size: 12px;
     text-align: center;
     padding: 5px 0px;
+    
+}
+.sitemenu .depth2 > li:hover {
+    background:#3a3a3a
 }
