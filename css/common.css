@@ -169,6 +169,9 @@ height: 400px;}
 .under_menu .under_tab a:hover {
     color: tomato;
 }
+.under_menu .under_tab a:hover::before {
+    color: #e0e0e0;
+}
 .under_menu .under_tab a::before {
     content: '|'; position: absolute;
     top: 50%; left: 0;
