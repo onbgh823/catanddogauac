@@ -4,13 +4,20 @@
 
 .background {
     width: 100%;
-    height: 200px;
+    height: 600px;
+    background-image: url(../images/main_metapo01.jpg);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    position: relative;
 }
 .background h1 {
     font-size: 30px;
     display: block;
     text-align: center;
-    padding-top: 100px;
+    position: absolute; bottom: 10%; left: 50%;
+    transform: translateX(-30%);
+    color: #fff;
 }
 .middle_bar {
     height: 50px;
@@ -48,4 +55,105 @@
 .login_box .message p   {
     padding: 12px 0;
     font-size: 14px;
+}
+/* ===================================== */
+.login_win {
+    padding: 130px 0 50px;
+    width: 40%;
+    /* border: 5px solid salmon; */
+}
+.login_win h2 {
+    color: #333;
+    font-weight: bold;
+    display: block;
+}
+.login_win .login_content {
+    
+}
+.login_win .login_content .idpw_box {
+
+}
+.login_win .login_content input {
+    width: 100%;
+    height: 60px;
+    background: rgb(243, 193, 150);
+    padding: 20px 50px;
+    margin: 5px 0;
+    border-radius: 20px;    
+    
+}
+.login_win .login_content input::placeholder {
+    color: black;
+    font-weight: 900;
+}
+.login_win .login_content input[type=text] {
+    font-weight: 900;
+}
+
+.login_win .login_content > button {
+    width: 100%;
+    height: 60px;
+    border-radius: 20px;
+    margin: 10px 0;
+    background: #1f1f1f;
+    color: #fff;
+    transition: all 0.5s;
+}
+.login_win .login_content > button:hover {
+    background: #fff;
+    color: #1f1f1f;
+}
+.login_win .help_box .helpus > button {
+    width: 32.5%;
+    height:30px;
+    border-radius: 20px;
+    background: #0099d2;
+    color: rgb(0, 0, 0);
+    transition: all 0.5s;
+}
+.login_win .help_box .helpus > button:hover {
+    background: tomato;
+}
+.sans_login {
+    padding: 30px 0 130px;
+    width: 40%;
+}
+.sans_login h2 {
+    color: #333;
+    font-weight: 900;
+    padding-bottom: 10px;
+}
+.sans_login p {
+    color:turquoise;
+    font-weight: 900;
+    font-size: 12px;
+}
+.sans_login input {
+    width: 100%;
+    height: 60px;
+    background: rgb(243, 193, 150);
+    padding: 20px 50px;
+    margin: 5px 0;
+    border-radius: 20px;  
+}
+.sans_login .login_content input::placeholder {
+    color: #0099d2;
+    font-weight: 900;
+}
+.sans_login .login_content input[type=text] {
+    font-weight: 900;
+    color: #0099d2;
+}
+.sans_login .login_content > button {
+    width: 100%;
+    height: 60px;
+    border-radius: 20px;
+    margin: 10px 0;
+    background: #1f1f1f;
+    color: #fff;
+    transition: all 0.5s;
+}
+.sans_login .login_content > button:hover {
+    background: #fff;
+    color: #1f1f1f;
 }
