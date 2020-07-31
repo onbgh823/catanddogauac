@@ -175,12 +175,15 @@
     border-radius: 20px;
     background-color: paleturquoise;
     height: 50px;
-    text-align: center;
+    line-height: 50px;
 }
+
 .logo_website .shell span {
     display: block;
     font-weight: 900;
     font-size: 15px;
+    
+    
 }
 .logo_website .shell button span::before {
     content: '';
@@ -191,7 +194,18 @@
     background-repeat: no-repeat;
     background-size: 50px auto;
     background-position: -9px -5px;
-    position: relative; top: 4px;
+    position: relative; top: 10px;
+}
+.logo_website .shell button:hover span::before {
+    content: '';
+    display: inline-block;
+    margin-right: 8px;
+    width: 36px; height: 33px;
+    background-image: url(../images/openshell.png);
+    background-repeat: no-repeat;
+    background-size: 60px auto;
+    background-position: -12px -8px;
+    position: relative; top: 10px;
 }
 /* button span::before {
     인라인 블럭
