@@ -2,25 +2,24 @@
 @import "reset.css";
 @import "common.css";
 
-.fixed_back {
+.fixed_bg {
     width: 100%;
     height: 600px;
-    background-image: url(../images/main_metapo02.jpg);
+    background-image:
+    url(../images/main_metapo02.jpg);
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
-    position: relative;
+    
+}.mid_menu { 
+   
 }
-.fixed_back h1 {
+.mid_menu h1 {
     font-size: 30px;
     display: block;
-    text-align: center;
-    position: absolute; top: 100%; left: 50%;
-    /* transform: translateX(-30%); */
-    color: #fff;
-    padding: 100px 0;
+    color: #333
 }
-.fixed_back span {
+.mid_menu span {
     font-size: 12px;
 }
 /* .middle_bar {
