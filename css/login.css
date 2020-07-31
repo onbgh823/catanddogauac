@@ -67,12 +67,12 @@
     font-weight: bold;
     display: block;
 }
-.login_win .login_content {
+/* .login_win .login_content {
     
 }
 .login_win .login_content .idpw_box {
 
-}
+} */
 .login_win .login_content input {
     width: 100%;
     height: 60px;
@@ -156,4 +156,9 @@
 .sans_login .login_content > button:hover {
     background: #fff;
     color: #1f1f1f;
+}
+
+.login_form .check {
+    text-align: right;
+    padding: 15px 0;
 }
