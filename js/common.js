@@ -2,7 +2,7 @@
 
     $('#leeBox').load('main.html')
 
-    $('.topmenu > .login > a').on('click', function(e){
+    $('.topmenu > .row > .login > a').on('click', function(e){
         e.preventDefault()
         var url = $(this).attr('href')
         $('#leeContainer').remove()
