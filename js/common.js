@@ -6,7 +6,7 @@
         e.preventDefault()
         var url = $(this).attr('href')
         $('#leeContainer').remove()
-        $('#leeBox').laod(url)
+        $('#leeBox').load(url)
     })
     // 로고부분
     // $('.logoNav > h1 > a').on('click', function(e){
