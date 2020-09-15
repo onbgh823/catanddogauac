@@ -15,6 +15,7 @@
 }
 /* #section {padding-top: 131px;} */
 /* .slideInner {height: 100%;} */
+/* 슬릭할때 슬라이드인너에 아무효과 들어가면 안됨 */
 .slideInner .slide {
     background-size: cover;
     background-repeat: no-repeat;
