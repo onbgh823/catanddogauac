@@ -6,28 +6,33 @@
 /* 공통구역을 제외한 메인페이지 스타일 */
 
 
-
-/* #section {padding-top: 131px;} */
-.slide {
-    width: 100%;
+.slideOuter {
+    position: relative;
+    /* text-align: center; */
     height: 950px;
-    overflow: hidden;
+    /* overflow: hidden; */
+    /* 슬릭 플러그인을 연결하기전에 풀어준다 */
 }
-.slide .slideInner {
+/* #section {padding-top: 131px;} */
+/* .slideInner {height: 100%;} */
+.slideInner .slide {
     background-size: cover;
     background-repeat: no-repeat;
     height: 950px;
     background-position: center;
     position: relative;
 }
-.slide .slideInner:nth-child(1)
-{background-image: url(../images/main_metapo02.jpg);}
-.slide .slideInner:nth-child(2)
-{background-image: url(../images/main_metapo03.jpg);}
-.slide .slideInner:nth-child(3)
-{background-image: url(../images/main_metapo01.jpg);}
+.slideInner .bg1
+{background-image: url(../images/main_metapo02.jpg);
+}
+.slideInner .bg2
+{background-image: url(../images/main_metapo03.jpg);
+;}
+.slideInner .bg3
+{background-image: url(../images/main_metapo01.jpg);
+}
 
-.slide .slideInner .text {
+.slideInner .slide .text {
     position: absolute;
     top:50%; left: 0%;
     transform: translateY(-50px);
@@ -38,14 +43,14 @@
     padding-top: 50px;
 
 }
-.slide .slideInner .text h2 {
+.slideInner .slide .text h2 {
     font-size: 57px;
     color: #fff;
     padding-bottom: 50px;
     position: relative;
     
 }
-.slide .slideInner .text h2:after {
+.slideInner .slide .text h2:after {
     content:''; width:300px; 
     height:2px; 
     background:#fff;
@@ -53,7 +58,7 @@
     left:50%; margin-left: -150px;
 
 }
-.slide .slideInner .text h3 {
+.slideInner .slide .text h3 {
     font-size: 76px;
     color:#fff;
     padding: 25px 0px;
@@ -64,16 +69,48 @@
     rgba(255,255,255,0.20) 79.27%,
     rgba(255,255,255,0.00) 100%);
 }
-.slide .slideInner .text h4 {
+.slideInner .slide .text h4 {
     font-size: 28.5px;
     color:#fff;
     margin:0 0 100px;
 }
-.sildeOuter {
-    position: relative;
+/* 9/14 slick 플러그인 */
+/* 화살표 버튼 */
+.slideOuter .marrow {
+    position: absolute;
+    top: 50%; transform: translateY(-50%);
+    font-size: 50px; color: #fff;
+    background: none;
+    border: none;
+}
+.slideOuter .prevArrow {left: 100px; z-index: 99999999999;}
+.slideOuter .nextArrow {right: 100px;}
+
+/*토트버튼  */
+.slideOuter .slick-dots {
+    position: absolute;
+    bottom: 30px;
+    width: 100%;
     text-align: center;
 }
-.sildeOuter .arr {
+.slideOuter .slick-dots li {
+    display: inline-block;
+    /* text-align:center 가 먹힘 */
+}
+.slideOuter .slick-dots li button {
+    width: 30px; height: 30px;
+    border-radius: 50%;
+    border: none;
+    background: aquamarine;
+    color: transparent;
+    /* overflow: hidden; */
+    margin: 0 5px;
+}
+.slideOuter .slick-dots li.slick-active button {
+    background: tomato;
+}
+/* 플러그인 슬릭을 만들어줄것이기 떄문에 삭제 */
+/* .sildeOuter .arr {
     font-size: 60px;
     color: #fff;
     position: absolute;
@@ -100,7 +137,7 @@
 .sildeOuter .dotBox a.active {
     background: tomato; border-radius: 20%;
     width: 60px; height: 15px;
-}
+} */
 /* ================================================== */
 /* #section .backcolor {background:tomato} */
 .pic4menu {padding: 60px 0px;
