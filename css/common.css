@@ -258,6 +258,7 @@ height: 400px;}
     transform: translateY(-50%);
     width: 100%;
     text-align: center;
+    animation: bounce 1s both infinite;
 
 }
 .introAni i:nth-child(2){

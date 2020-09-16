@@ -1,7 +1,7 @@
 (function($){
 
     $(window).load(function(){
-        $('.introAni').delay(500).fadeOut(500)
+        $('.introAni').delay(700).fadeOut(700)
         // paw 깜빡거림
         
     })

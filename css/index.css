@@ -150,7 +150,7 @@
     /* padding: 15px 0px; */
     position: relative;
 }
-.column div:first-child {
+.column div:nth-child(1) {
     margin-bottom: 15px;    
 }
 .column .white:hover::after {
@@ -204,6 +204,26 @@
 
 .column >div {height: 280px;
     overflow: hidden;}
+
+/* 애니메이션 */
+.pic4menu {overflow: hidden;}
+.pic4menu .column:nth-child(1) {
+    opacity: 0;
+    -webkit-transform: translate3d(-100%, 0, 0);
+    transform: translate3d(-100%, 0, 0);
+}
+.pic4menu .column:nth-child(2) {
+    opacity: 0;
+    -webkit-transform: translate3d(100%, 0, 0);
+    transform: translate3d(100%, 0, 0);
+}
+/* ------------------------ */
+.pic4menu.on .column:nth-child(1) {
+    animation:fadeInLeft 1s both ;
+}
+.pic4menu.on .column:nth-child(2) {
+    animation:fadeInRight 1s both ;
+}
 
     /* =============================================== */
 .cscenter {
@@ -380,12 +400,44 @@
 /* ========================================== */
 
 .item_list {padding: 60px 15px;}
+.item_list .profile_ullist .lilist{
+    float: left;
+    width: 22.5%;
+    background-size:auto;
+    background-repeat:no-repeat;
+    background-size: cover;
+    height:186px; margin:1% 1%; 
+}
+.item_list .profile_ullist .lilist:nth-child(1) {
+    background-image:url(../images/list1.jpg);
+}
+.item_list .profile_ullist .lilist:nth-child(2) {
+    background-image:url(../images/list2.jpg); 
+}
+.item_list .profile_ullist .lilist:nth-child(3) {
+    background-image:url(../images/list3.jpg); 
+}
+.item_list .profile_ullist .lilist:nth-child(4) {
+    background-image:url(../images/list4.jpg); 
+}
+.item_list .profile_ullist .lilist:nth-child(5) {
+    background-image:url(../images/list5.jpg); 
+}
+.item_list .profile_ullist .lilist:nth-child(6) {
+    background-image:url(../images/list6.jpg); 
+}
+.item_list .profile_ullist .lilist:nth-child(7) {
+    background-image:url(../images/list7.jpg); 
+}
+.item_list .profile_ullist .lilist:nth-child(8) {
+    background-image:url(../images/list8.jpg); 
+}    
 .item_list p {
     font-size: 28px;
     padding: 0 0 40px;
     text-align: center;
 }
-.profile_list li {
+/* .profile_list li {
     display: inline-block;
     width: 22.5%;
     margin:1% 1%;
@@ -398,7 +450,7 @@
 .profile_list li > span{
     display: block;
     text-align: center;
-}
+} */
 
 /* =============================================== */
 .banner {
