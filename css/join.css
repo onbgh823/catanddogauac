@@ -181,7 +181,7 @@
     position: relative; top: 4px;
 }
 .join_form .gender_area input[type=radio]:checked + label::before {
-    background-position: -296px -; 
+    background-position: -296px; 
 }
 .join_form .hobby_area label {
     line-height: 45px;

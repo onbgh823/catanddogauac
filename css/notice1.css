@@ -1,0 +1,173 @@
+@charset "urf-8";
+
+.background_nd {
+    width: 100%;
+    height: 600px;
+    background-image: url(../images/main_metapo03.jpg);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    position: relative;
+}
+.background_nd h1 {
+    font-size: 30px;
+    display: block;
+    text-align: center;
+    position: absolute; bottom: 10%; left: 50%;
+    transform: translateX(-30%);
+    color: #fff;
+}
+.middle_bar_nd {
+    height: 50px;
+    width: 100%;
+    background:#000;
+    position: relative;
+}
+.middle_bar_nd a {
+    color:#fff;
+    text-align: right;
+    display: block;
+    padding-top: 15px;
+    font-size: 12px;
+}
+.inscrire_box .title {
+    width:100%; height: 197px;
+    display: inline-block;
+}
+.inscrire_box .title h1 {
+    font-size: 32px;
+    padding: 60px 30px 50px 40px;
+    border-bottom: 2px solid tomato;
+}
+.inscrire_box .title span {
+    font-size: 12px;
+    padding-left: 10px;
+}
+.inscrire_box .message {
+    background: rgb(225, 243, 124);
+    width:95%;
+    padding-left: 20px;
+    margin-left: 30px;
+}
+.inscrire_box .message p   {
+    padding: 12px 0;
+    font-size: 14px;
+    /* display: block; */
+}
+.inscrire_box .message p span {
+    display: block;
+}
+/* ---------공지사항--------- */
+.notiPage {
+    padding: 100px 0px;
+}
+.cherBox {
+    text-align: center;
+}
+.cherBox select {
+    height: 45px;
+    vertical-align: middle;
+    border: 2px solid seagreen;
+    border-radius: 7px;
+}
+.cherBox input[type=text] {
+    height: 45px;
+    vertical-align: middle;
+    text-indent: 2em;
+    width: 500px;
+    border: 2px solid seagreen;
+    border-radius: 7px;
+}
+.cherBox input[type=submit] {
+    height:45px;
+    color: #000;
+    background: #fff;
+    border: 2px solid seagreen;
+    border-radius: 7px;
+    padding: 0px 8px;
+    vertical-align: middle;
+}
+.cherBox input:hover[type=text],
+.cherBox input:hover[type=submit]
+ {
+    background: seagreen;
+    transition: all 0.5s;
+    border: 2px solid black;
+}
+/* 테이블 */
+.notiTable td {
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+.notiTable {margin-top: 35px;}
+.notiTable col:nth-child(1) {
+    width: 10%;
+}
+.notiTable col:nth-child(2) {
+    width: auto;
+}
+.notiTable col:nth-child(3) {
+    width: 15%;
+}
+.notiTable col:nth-child(4) {
+    width: 15%;
+}
+.notiTable col:nth-child(5) {
+    width: 7%;
+}
+.notiTable table {
+    border: none;
+    font-size: 15px;
+}
+.notiTable th, 
+.notiTable td {
+    border-top: 1px solid seagreen;
+    border-bottom: 1px solid seagreen;
+    padding:17px 5px;
+}
+.notiTable tbody td:nth-child(1),
+.notiTable tbody td:nth-child(3),
+.notiTable tbody td:nth-child(4),
+.notiTable tbody td:nth-child(5) {
+    text-align: center;
+}
+.notiTable th { 
+    background:rgb(139, 218, 136);
+    border-top: 3px solid rgb(21, 63, 39);
+    font-size: 17px;
+    font-weight: bold;
+}
+.notiTable tbody tr:hover {
+    background-color: rgb(225, 243, 124);
+    font-weight: bold;
+}
+/* ----------게시판페이지--------- */
+.notiPage .numlist {
+    text-align: center;
+    margin: 20px 0px;
+    font-size: 16px;
+}
+.notiPage .numlist span {
+    background:rgb(225, 243, 124);
+    /* padding:5px 8px; */
+    display: inline-block;
+    border-radius: 10px;
+}
+.notiPage .numlist span:hover {
+    animation: bounce 1s both infinite;
+}
+.notiPage .numlist a {
+    display: inline-block;
+    padding: 5px 8px;
+    /* border: 1px solid darkred; */
+    border-radius: 10px;
+}
+.notiPage .numlist a:hover {
+    background: rgb(71, 96, 206);
+}
+.notiPage .numlist a.on {background: rgb(71, 96, 206);}
+
+/* 게시판 페이지는 목록페이지만 두개
+게시판 쓰기, 상세읽기, 수정 페이지 등은 힘이 남으면 만드세요^^
+ */

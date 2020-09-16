@@ -269,6 +269,10 @@
     position: absolute;
     top: 100; right: 0;
 }
+.cscenter .board .tabCont {
+    position: relative;
+    height:160px;
+}
 .cscenter .board .tabCont td a:before {content:'ㆍ';}
 .cscenter .board .tabCont td {
     font-size: 14px;
@@ -281,7 +285,22 @@
 .cscenter .board .tabCont td:last-child {
     padding-left: 80px;
 }
-
+/* 더보기 속성 */
+.cscenter .board .tabCont > div {
+    position: absolute;
+    top: 0; left: 0;
+    display: none;
+}
+.cscenter .board .tabCont > div:nth-child(1) {
+    display: block;
+}
+.cscenter .board .more {
+    position: absolute;
+    top:-50px;  right: 0;
+    padding: 5px;
+    background: yellowgreen;
+}
+/* 유튜브 비디오 */
 .youtube {
     float: left;
     width: 31.5%;

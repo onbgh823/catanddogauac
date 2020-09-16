@@ -42,8 +42,32 @@
 
     })
 
+// 수정해야함 게시판 영역 notice영역이 2개일떄
+    // $('.tabTit li').each(function(i){
+    //     $(this).find('a').on('click', function(e){
+    //         e.preventDefault()
+    //         $(this).parent().addClass('on')
+    //         .siblings().removeClass('on')
+    //         $('.tabCont > div').eq(i).fadeIn(100)
+    //         .siblings().fadeOut(100)
+    //     })
+    // })
 
-   
+
+    // 공지사항페이지 로드하는거 헤더와 풋터가 나타남
+    $('.tabTit > a').on('click', function(e){
+        e.preventDefault()
+        var url = $(this).attr('href')
+        $('#leeContainer').remove()
+        $('#leeBox').load(url)
+    })
+    
+    $('.backcolor .pic4menu .costomer > a').on('click', function(e){
+        e.preventDefault()
+        var url = $(this).attr('href')
+        $('#leeContainer').remove()
+        $('#leeBox').load(url)
+    })
 
 
 
