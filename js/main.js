@@ -70,14 +70,25 @@
     })
 
     // 버튼 소메뉴
-    $('#notice .background_nd .costomenu button').on('click',function(e){
+    $('#notice .background_nd .costomenu a').on('click',function(e){
         e.preventDefault()
         var index = $(this).index()
         $(this).addClass('on')
         .siblings().removeClass('on')
-        $('.notiPage .qnaBox').eq(index).fadeIn(100)
-        .siblings().fadeOut(100)
+        $('.group1 > div').eq(index).show()
+        .siblings().hide()
+        
     })
+
+    // $('#notice .background_nd .costomenu button').each(function(i){
+    //     $(this).find('button').on('click', function(e){
+    //         e.preventDefault()
+    //         $(this).parent().addClass('on')
+    //         .siblings().removeClass('on')
+    //         $('.notiPage .qnaBox').eq(i).fadeIn(100)
+    //         .siblings().fadeOut(100)
+    //     })
+    // })
 
 
 
