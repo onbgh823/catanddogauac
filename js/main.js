@@ -35,7 +35,7 @@
         }
         
         
-
+        
 
 
 
@@ -67,6 +67,16 @@
         var url = $(this).attr('href')
         $('#leeContainer').remove()
         $('#leeBox').load(url)
+    })
+
+    // 버튼 소메뉴
+    $('#notice .background_nd .costomenu button').on('click',function(e){
+        e.preventDefault()
+        var index = $(this).index()
+        $(this).addClass('on')
+        .siblings().removeClass('on')
+        $('.notiPage .qnaBox').eq(index).fadeIn(100)
+        .siblings().fadeOut(100)
     })
 
 

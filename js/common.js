@@ -59,11 +59,17 @@
 
     $('#leeBox').load('main.html')
 
-    $('.topmenu .login > a').on('click', function(e){
-        e.preventDefault()
+    // $('.topmenu .login > a').on('click', function(e){
+    //     e.preventDefault()
+    //     var url = $(this).attr('href')
+    //     $('#leeContainer').remove()
+    //     $('#leeBox').load(url)
+    // })
+    $('.topmenu .login > a').on('click', function(){
         var url = $(this).attr('href')
         $('#leeContainer').remove()
         $('#leeBox').load(url)
+        return false
     })
     // 메뉴바에서 들어가기 공지사항
     $('.nav .depth1 .depth2 > li > a, .nav .depth1 > li > a, .sitemenu_box .depth1 .depth2 > li > a, .sitemenu_box .depth1 > li > a').on('click', function(e){
@@ -72,15 +78,16 @@
         $('#leeContainer').remove()
         $('#leeBox').load(url)
     })
+
     // 로고부분
-
-
     // $('.logoNav > h1 > a').on('click', function(e){
     //     e.preventDefault()
     //     var url = $(this).attr('href')
     //     $('#leeContainer').remove()
     //     $('#leeBox').load(url)
     // })
+
+    
 
  
 

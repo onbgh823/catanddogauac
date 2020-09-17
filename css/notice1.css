@@ -3,25 +3,49 @@
 .background_nd {
     width: 100%;
     height: 600px;
-    background-image: url(../images/main_metapo03.jpg);
+    background-image: url(../images/main_metapo02.jpg);
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
     position: relative;
+    /* border: 1px solid blue; */
 }
 .background_nd h1 {
     font-size: 30px;
-    display: block;
+    height: 40px;
+    display: inline-block;
     text-align: center;
-    position: absolute; bottom: 10%; left: 50%;
-    transform: translateX(-30%);
+    position: absolute; bottom: 20%; left: 50%;
+    transform: translateX(-50%);
     color: #fff;
 }
+/* 소메뉴 */
+#notice {position: relative;}
+#notice .costomenu{
+    /* border: 1px solid red; */
+    position: absolute;
+    bottom: 7%; left: 50%;
+    transform: translate(-50%);
+    width: 100%;
+    text-align: center;
+}
+
+#notice .costomenu button {
+    width: 20%;
+    height:30px;
+    border-radius: 15px;
+    background: #afd0db;
+    color: rgb(0, 0, 0);
+    transition: all 0.5s;
+}
+/* ------------------ */
 .middle_bar_nd {
     height: 50px;
     width: 100%;
     background:#000;
     position: relative;
+    /* border: 1px solid red; */
+    margin-top: -100px;
 }
 .middle_bar_nd a {
     color:#fff;
@@ -29,6 +53,13 @@
     display: block;
     padding-top: 15px;
     font-size: 12px;
+    /* border: 2px solid red; */
+    position: absolute;
+    top: 10%; left: 75%;
+    transform: translateY(-50%,-50%);
+}
+.inscrire_box {
+    margin-bottom: 100px;
 }
 .inscrire_box .title {
     width:100%; height: 197px;
@@ -36,7 +67,7 @@
 }
 .inscrire_box .title h1 {
     font-size: 32px;
-    padding: 60px 30px 50px 40px;
+    padding: 40px 30px 50px 40px;
     border-bottom: 2px solid tomato;
 }
 .inscrire_box .title span {
@@ -171,3 +202,5 @@
 /* 게시판 페이지는 목록페이지만 두개
 게시판 쓰기, 상세읽기, 수정 페이지 등은 힘이 남으면 만드세요^^
  */
+
+.notiPage .qnaBox {display: none;}

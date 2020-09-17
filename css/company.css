@@ -1,6 +1,5 @@
 @charset "utf-8";
-@import "reset.css";
-@import "common.css";
+
 
 .fixed_bg {
     width: 100%;
@@ -11,17 +10,18 @@
     background-position: center;
     background-repeat: no-repeat;
     
-}.mid_menu { 
+}
+/* .mid_menu { 
    
 }
-.mid_menu h1 {
+.mid_menu h2 {
     font-size: 30px;
     display: block;
     color: #333
-}
-.mid_menu span {
+} */
+/* .mid_menu span {
     font-size: 12px;
-}
+} */
 /* .middle_bar {
     height: 50px;
     width: 100%;
