@@ -1,4 +1,7 @@
 (function($){
+    
+
+
 
     $(window).load(function(){
         $('.introAni').delay(700).fadeOut(700)
@@ -35,21 +38,21 @@
     // }
 
     // 글자색 랜덤, 활용가능
-    var colorCode =['red','blue','green','yellow','lime']
-    var minCnt = setInterval(minusCount, 1000)
-    var i = 5;
-    function minusCount() {
-        i--;
-        if (i===0) {
-            clearInterval(minCnt)
-            $('.introAni').fadeOut(500)
-            return false
-        }
-        $('.introAni i').text(k+'sec');
-        $('.introAni i').css({
-            color:colorCode[i]
-        })
-    }
+    // var colorCode =['red','blue','green','yellow','lime']
+    // var minCnt = setInterval(minusCount, 1000)
+    // var i = 5;
+    // function minusCount() {
+    //     i--;
+    //     if (i===0) {
+    //         clearInterval(minCnt)
+    //         $('.introAni').fadeOut(500)
+    //         return false
+    //     }
+    //     $('.introAni i').text(k+'sec');
+    //     $('.introAni i').css({
+    //         color:colorCode[i]
+    //     })
+    // }
 // paw 깜빡거리게
     // var colorCode =['tomato','white']
     // var minCnt = setInterval(blink, 500)
@@ -99,32 +102,10 @@
     // })
 
 
-    var scrollSize = $(document).height() - $(window).height();
-    $(window).on('scroll',function() {
-        var sct = $(this).scrollTop();
-
-            //스트롤할때 가로로 바가 이동
-            $('.scrolling-bar')
-            .css({
-                zIndex : 999999999,
-                opacity : '1', 
-                width : ((sct / scrollSize) * 100) + '%'
-            });
-    // 스크롤탑값에 따라 헤더구역 고정시키기
-    if (sct>= $('#header').height() ) {
-        $('#header').css({
-            position:'fixed',
-            background:'rgba(0,0,0,1)'
-        })
-    } else {
-        $('#header').css({
-            position:'relative',
-            background:'tomato'
-        })
-    }
     
-});
- 
+
+
+
 
 })(jQuery)
 

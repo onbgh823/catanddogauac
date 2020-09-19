@@ -177,9 +177,9 @@
     font-weight: bold;
 }
 /* ----------게시판페이지--------- */
-/* .notiPage {
-    border: 5px solid green;
-} */
+.notiPage {
+    padding-bottom: 150px;
+}
 .notiPage .numlist {
     text-align: center;
     margin: 20px 0px;

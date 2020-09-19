@@ -2,10 +2,55 @@
 
 (function($){
 
+    //top scoll bar
+	// 스크롤탑값에 따라 헤더아래쪽 선의 넓이 변경하기    
+    var scrollSize = $(document).height() - $('#header').height() - $(window).height();
+    var flag = true;
+    $(window).on('scroll',function() {
+        var sct = $(this).scrollTop();
+        var wid = (sct/scrollSize)*100 + '%';
+            //스트롤할때 가로로 바가 이동
+            $('.scrolling-bar')
+            .css({
+                zIndex : 99999999,
+                opacity : 1, 
+                width : wid
+            });
+    // 스크롤탑값에 따라 헤더구역 고정시키기
+        if (sct >= 131 && flag) {
+            $('#header').css({
+                position:'fixed',
+                opacity:'0',
+                height:'0px',
+                backgroundColor:'rgb(255,99,71)'
+            }).stop().animate({
+                height:'131px',
+                opacity:'1'
+            },500)
+            flag = false;
+    } else if (sct===0 && !flag) {
+        $('#header').css({
+            position:'relative',
+            height:'0',
+            opacity:'0'
+        }).stop().animate({
+            opacity:1,
+            height:'131px',
+            backgroundColor:'rgb(255,99,71)'
+        },500)
+        flag=true
+    }
+//  not working
 
+    
+
+});
+
+
+// 슬라이더 
     $('.slideInner').slick({
         autoplay: true, // 자동재생
-        autoplaySpeed: 3000, // 간격시간
+        autoplaySpeed: 5000, // 간격시간
         dots: true, // 동그라미버튼
         speed: 600, // 바뀌는시간(생략가능)
         slidesToShow: 1, // 보여질슬라이드수(생략가능)
@@ -22,11 +67,14 @@
         })
 
 
+
+
+//메뉴 4개 
     $(window).scroll(function(){
         var sct = $(this).scrollTop()
 
 
-        var pic4Near = $('.backcolor').offset().top - $(this).height()/2
+        var pic4Near = $('.backcolor').offset().top - $(this).height()/1.5
 
         if(sct >= pic4Near) {
             $('.pic4menu').addClass('on')
@@ -34,7 +82,13 @@
             $('.pic4menu').removeClass('on')
         }
         
+        var pic4Near =$('.cscenter').offset().top - $(this).height()/1.5
         
+        if(sct >= pic4Near) {
+            $('.board, .youtube, .contact').addClass('on')
+        }else {
+            $('.board, .youtube, .contact').removeClass('on')
+        }
         
 
 
@@ -68,17 +122,35 @@
         $('#leeContainer').remove()
         $('#leeBox').load(url)
     })
-
-    // 버튼 소메뉴
-    $('#notice .background .costomenu a').on('click',function(e){
+    $('.backcolor .pic4menu .business > a').on('click', function(e){
         e.preventDefault()
-        var index = $(this).index()
-        $(this).addClass('on')
-        .siblings().removeClass('on')
-        $('.notiPage > div').eq(index).show()
-        .siblings().hide()
-        
+        var url = $(this).attr('href')
+        $('#leeContainer').remove()
+        $('#leeBox').load(url)
     })
+    $('.backcolor .pic4menu .company > a').on('click', function(e){
+        e.preventDefault()
+        var url = $(this).attr('href')
+        $('#leeContainer').remove()
+        $('#leeBox').load(url)
+    })
+    $('.backcolor .pic4menu .product > a').on('click', function(e){
+        e.preventDefault()
+        var url = $(this).attr('href')
+        $('#leeContainer').remove()
+        $('#leeBox').load(url)
+    })
+
+    // // 버튼 소메뉴
+    // $('#notice .background .costomenu a').on('click',function(e){
+    //     e.preventDefault()
+    //     var index = $(this).index()
+    //     $(this).addClass('on')
+    //     .siblings().removeClass('on')
+    //     $('.notiPage > div').eq(index).show()
+    //     .siblings().hide()
+        
+    // })
 
     // $('#notice .background_nd .costomenu button').each(function(i){
     //     $(this).find('button').on('click', function(e){

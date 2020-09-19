@@ -23,7 +23,7 @@
                 <div class="notiBox">
                     <div class="middle_bar">
                         <i class="fas fa-home">
-                            <a href="#">Home > CUSTOMER > 질문과 답변</a>
+                            <a href="#">Home > CUSTOMER > 공지사항</a>
                         </i>
                 </div>
                     <div class="inscrire_box row">
@@ -164,7 +164,7 @@
                 <div class="qnaBox">
                     <div class="middle_bar">
                         <i class="fas fa-home">
-                            <a href="#">Home > CUSTOMER > 공지사항</a>
+                            <a href="#">Home > CUSTOMER > 질문과 답변</a>
                         </i>
                     </div>
                     <div class="inscrire_box row">
@@ -191,8 +191,16 @@
 자바스크립트나 제이쿼리로 동적인 디자인을 만들어라 -->
 
 
-<script src="js/main.js"></script>
-<!-- $(window).scroll(function(){
-    var sct = $(this).scrollTop()
-    var actNear = $()
-}) -->
+
+<script>
+    // 버튼 소메뉴
+    $('#notice .background .costomenu a').on('click',function(e){
+        e.preventDefault()
+        var index = $(this).index()
+        $(this).addClass('on')
+        .siblings().removeClass('on')
+        $('.notiPage > div').eq(index).show()
+        .siblings().hide()
+        
+    })
+</script>
