@@ -1,32 +1,51 @@
 @charset "utf-8";
 
-
-/* .fixed_bg {
+#subcompany .background {
     width: 100%;
     height: 600px;
-    background-image:
-    url(../images/main_metapo02.jpg);
+    background-image: url(../images/main_metapo01.jpg);
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
+    position: relative;
     
-} */
-/* .mid_menu { 
-   
 }
-.mid_menu h2 {
+#subcompany .background h1 {
     font-size: 30px;
     display: block;
-    color: #333
-} */
-/* .mid_menu span {
-    font-size: 12px;
-} */
-/* .middle_bar {
+    text-align: center;
+    position: absolute; bottom: 20%; left: 50%;
+    transform: translateX(-50%);
+    color: #fff;
+}
+/* 소메뉴 */
+#subcompany {position: relative;}
+#subcompany .costomenu{
+    /* border: 1px solid red; */
+    position: absolute;
+    bottom: 7%; left: 50%;
+    transform: translate(-50%);
+    width: 100%;
+    text-align: center;
+}
+
+#subcompany .costomenu a {
+    display: inline-block;
+    width: 120px;
+    height:35px;
+    border-radius: 15px;
+    background: #afd0db;
+    color: rgb(0, 0, 0);
+    transition: all 0.5s;
+    font-size: 17px;
+    padding-top: 5px;
+}
+.middle_bar {
     height: 50px;
     width: 100%;
     background:#000;
     position: relative;
+    
 }
 .middle_bar a {
     color:#fff;
@@ -34,4 +53,12 @@
     display: block;
     padding-top: 15px;
     font-size: 12px;
-} */
+    position: absolute;
+    top: 10%; left: 75%;
+    transform: translateY(-50%,-50%);
+}
+
+
+
+.group1 .histoire {display: none;}
+.group1 .location {display: none;}

@@ -70,12 +70,12 @@
     })
 
     // 버튼 소메뉴
-    $('#notice .background_nd .costomenu a').on('click',function(e){
+    $('#notice .background .costomenu a').on('click',function(e){
         e.preventDefault()
         var index = $(this).index()
         $(this).addClass('on')
         .siblings().removeClass('on')
-        $('.group1 > div').eq(index).show()
+        $('.notiPage > div').eq(index).show()
         .siblings().hide()
         
     })

@@ -1,6 +1,6 @@
 @charset "urf-8";
 
-.background_nd {
+.background {
     width: 100%;
     height: 600px;
     background-image: url(../images/main_metapo02.jpg);
@@ -10,7 +10,7 @@
     position: relative;
     /* border: 1px solid blue; */
 }
-.background_nd h1 {
+.background h1 {
     font-size: 30px;
     height: 40px;
     display: inline-block;
@@ -31,23 +31,26 @@
 }
 
 #notice .costomenu a {
-    width: 20%;
-    height:30px;
+    display: inline-block;
+    width: 120px;
+    height:35px;
     border-radius: 15px;
     background: #afd0db;
     color: rgb(0, 0, 0);
     transition: all 0.5s;
+    font-size: 17px;
+    padding-top: 5px;
 }
 /* ------------------ */
-.middle_bar_nd {
+.notiPage.middle_bar {
     height: 50px;
     width: 100%;
     background:#000;
     position: relative;
     /* border: 1px solid red; */
-    margin-top: -100px;
+    /* padding: 100px 0px; */
 }
-.middle_bar_nd a {
+.notiPage .middle_bar a {
     color:#fff;
     text-align: right;
     display: block;
@@ -89,9 +92,9 @@
     display: block;
 }
 /* ---------공지사항--------- */
-.notiPage {
+/* .notiPage {
     padding: 100px 0px;
-}
+} */
 .cherBox {
     text-align: center;
 }
@@ -174,6 +177,9 @@
     font-weight: bold;
 }
 /* ----------게시판페이지--------- */
+/* .notiPage {
+    border: 5px solid green;
+} */
 .notiPage .numlist {
     text-align: center;
     margin: 20px 0px;

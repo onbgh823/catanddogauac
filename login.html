@@ -5,6 +5,10 @@
         <section id="login">
             <div class="background">
                 <h1>MYPAGE. LOGIN</h1>
+                <div class="costomenu row">
+                    <a href="login.html" class="on">로그인</a>
+                    <a href="join.html">회원가입</a>
+                </div>
             </div>
             <div class="middle_bar">
                 <div class="row">
@@ -83,6 +87,18 @@
 <!-- 액션을 추가해라 너무 심심하고 정적이다 
 자바스크립트나 제이쿼리로 동적인 디자인을 만들어라 -->
 
+<script>
+    // 버튼 소메뉴
+    $('#login .background .costomenu a:nth-child(1)').on('click',function(e){
+        e.preventDefault()
+        var index = $(this).index()
+        $(this).addClass('on')
+        .siblings().removeClass('on')
+        $('#login .background .costomenu a:nth-child(2)').eq(index).fadeIn(100)
+        .siblings().fadeOut(100)
+        
+    })
+</script>
 
 
 

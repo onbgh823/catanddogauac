@@ -99,7 +99,7 @@
     // })
 
 
-    var scollSize = $(document).height() - $(window).height();
+    var scrollSize = $(document).height() - $(window).height();
     $(window).on('scroll',function() {
         var sct = $(this).scrollTop();
 
@@ -108,7 +108,7 @@
             .css({
                 zIndex : 999999999,
                 opacity : '1', 
-                width : ((sct / scollSize) * 100) + '%'
+                width : ((sct / scrollSize) * 100) + '%'
             });
     // 스크롤탑값에 따라 헤더구역 고정시키기
     if (sct>= $('#header').height() ) {
