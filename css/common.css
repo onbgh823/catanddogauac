@@ -279,7 +279,7 @@ height: 400px;}
     width: 100%;
     text-align: center;
     animation: bounce 1s both infinite;
-
+    font-size: 60px;
 }
 .introAni i:nth-child(2){
     position: absolute;
@@ -288,6 +288,7 @@ height: 400px;}
     width: 100%;
     text-align: center;
     animation:bar 3s both ;
+    font-size: 40px;
 }
 @keyframes bar {
     0% { 
