@@ -16,6 +16,7 @@
 /* #section {padding-top: 131px;} */
 /* .slideInner {height: 100%;} */
 /* 슬릭할때 슬라이드인너에 아무효과 들어가면 안됨 */
+/* .slideInner {position: relative;} */
 .slideInner .slide {
     background-size: cover;
     background-repeat: no-repeat;
@@ -115,6 +116,14 @@
 .slideOuter .slick-dots li.slick-active button {
     background: tomato;
 }
+/* 슬라이드 자동재생/멈춤 버튼 */
+/* .slideOuter .plpau {
+    font-size:30px; color:#fff; 
+    background:none; 
+    position:absolute; bottom:20px;
+    left:50%; margin-left:180px;
+} */
+
 /* 플러그인 슬릭을 만들어줄것이기 떄문에 삭제 */
 /* .sildeOuter .arr {
     font-size: 60px;
@@ -430,13 +439,38 @@
     padding-bottom: 25px;
 
 }
-.icon li > a {display: block;}
-.icon li{
+.businessInfo .icon {
+    overflow: hidden;
+}
+.businessInfo .icon .iconli {
+    opacity: 0;
+    -webkit-transform: translate3d(0, 100%, 0);
+    transform: translate3d(0, 100%, 0);
+}
+.businessInfo.on .icon .iconli {
+    animation: fadeInUp 1s both 0s;
+}
+.businessInfo .icon .iconli:nth-child(1) {
+    animation-delay:0.5s;
+}
+.businessInfo .icon .iconli:nth-child(2) {
+    animation-delay:1s
+}
+.businessInfo .icon .iconli:nth-child(3) {
+    animation-delay:1.5s
+}
+.businessInfo .icon .iconli:nth-child(4){
+    animation-delay:2s
+}
+
+
+.icon .iconli > a {display: block;}
+.icon .iconli{
     width: 24.5%;
     display: inline-block;
     text-align: center;
 }  
-.icon li .icon_bolt > div {
+.icon .iconli .icon_bolt > div {
     width: 100px; height: 100px;
     background: #fff;
     border-radius: 50%;
@@ -488,7 +522,8 @@
     
 }
 .icon a:hover div > i { 
-    color:#333;
+    color: tomato;
+    animation: bounce 1s both 0s infinite;
 }
 .icon a:hover div > h2 {
     color: #fff;
@@ -496,7 +531,7 @@
 
 /* ========================================== */
 
-.item_list {padding: 60px 15px;}
+/* .item_list {padding: 60px 15px;}
 .item_list .profile_ullist .lilist{
     float: left;
     width: 22.5%;
@@ -505,49 +540,77 @@
     background-size: cover;
     height:186px; margin:1% 1%; 
 }
-.item_list .profile_ullist .lilist:nth-child(1) {
-    background-image:url(../images/list1.jpg);
-}
-.item_list .profile_ullist .lilist:nth-child(2) {
-    background-image:url(../images/list2.jpg); 
-}
-.item_list .profile_ullist .lilist:nth-child(3) {
-    background-image:url(../images/list3.jpg); 
-}
-.item_list .profile_ullist .lilist:nth-child(4) {
-    background-image:url(../images/list4.jpg); 
-}
-.item_list .profile_ullist .lilist:nth-child(5) {
-    background-image:url(../images/list5.jpg); 
-}
-.item_list .profile_ullist .lilist:nth-child(6) {
-    background-image:url(../images/list6.jpg); 
-}
-.item_list .profile_ullist .lilist:nth-child(7) {
-    background-image:url(../images/list7.jpg); 
-}
-.item_list .profile_ullist .lilist:nth-child(8) {
-    background-image:url(../images/list8.jpg); 
-}    
 .item_list p {
     font-size: 28px;
     padding: 0 0 40px;
     text-align: center;
-}
+} */
+
 /* .profile_list li {
     display: inline-block;
     width: 22.5%;
     margin:1% 1%;
 }
-.profile_list li img {width: 100%;}
-.profile_list li a > span {
+.profile_list li img {width: 100%;} */
+.profile_ullist .lilist a > span {
     display: block;
     text-align: center;
 }
-.profile_list li > span{
+.profile_ullist .lilist > span{
     display: block;
     text-align: center;
-} */
+}
+/* 미니슬라이드 */
+.item_list { 
+    padding:60px 15px; 
+    position:relative; 
+}
+.item_list p {
+    font-size: 28px;
+    padding: 0 0 40px;
+    text-align: center;
+}
+.item_list img {
+     width:100%; 
+     padding:0 5px 
+    }
+.item_list .marrow { 
+    position:absolute; top:50%; 
+    transform:translateY(-50%);
+    background:none; border:none; 
+    font-size:50px; color:#999; 
+}
+.item_list .prevArrow { 
+    left:-30px; z-index:99999999 
+}
+.item_list .nextArrow { right:-30px }
+.item_list .slick-dots {
+     position:absolute; bottom:-30px; width:100%; text-align:center 
+}
+.item_list .slick-dots li{
+    display:inline-block 
+}
+.item_list .slick-dots li button{
+    width:15px; height:15px; background:#999; 
+    border:none; text-indent:-9999px; overflow:hidden; 
+    border-radius:50%;
+    margin:0 5px; 
+}
+.item_list .slick-dots  li.slick-active  button { background:#000 }  
+
+.item_list .slick-slide {   /* 슬릭슬라이더 안에 있는 모든 슬라이드 */
+    opacity:0.6;
+    transform:scale(0.85);
+    transition:all 0.5s;
+}
+.item_list .slick-slide.slick-active {  /* 무대 공간에 보여지는  슬라이드, slidesToShow */
+     opacity:1;
+}
+.item_list .slick-slide.slick-active.slick-current { /* 무대 중앙에 있는 슬라이드 하나 */
+  opacity:1;
+  transform:scale(1)
+}
+
 
 /* =============================================== */
 .banner {
@@ -644,4 +707,117 @@
 }
 .product_list li a > span:hover {
     background: rgba(199,22,45,1.00);
+}
+
+
+
+
+/* 다시 찾는 인기여행지 top3 */
+.about_area  h2 {
+    padding: 55px 0 105px;
+    text-align: center;
+    font-size: 40px;
+  }
+  .about_box {
+    background: #f4f0e9;
+  }
+  .place_list   li { float:left; width:32%; margin-left:2%;
+    position:relative; top:-50px; text-align:center }
+  .place_list   li:first-child { margin-left:0%  }
+  /* nth-child(n), last-child는 first-child에 비해 호환성이 낮음 */
+  .place_list  li  .imgbox { height:328px; overflow:hidden; 
+    position:relative; }
+  .place_list  li  .imgbox  img { transition:all 0.4s }
+  .place_list  li  .imgbox:hover  img { transform:scale(1.1) }
+  .place_list  li  .imgbox:after { content:"";
+     position:absolute; transition:all  0.4s;
+    top:50%; left:50%; bottom:50%; right:50%; 
+    background:rgba(0,0,0,0.3); }
+  .place_list  li  .imgbox:hover:after  {
+    top:0%; left:0%; bottom:0%; right:0%; }
+  .place_list  li  .imgbox:before  {
+    content:"\f00e";
+    font-family:'Font Awesome 5 Free'; 
+    font-weight:900 !important;
+    color:#fff;
+    font-size:30px;
+    position:absolute; top:50%; left:50%;
+    transform:translate(-50%, -50%);
+    opacity:0;  transition:all  0.4s  0.2s;  z-index:99999999  }
+  .place_list  li  .imgbox:hover:before  { opacity:1  }
+  
+  
+  .place_list  li   h3 {   font-weight: bold;   font-size: 18px;
+    padding-top: 25px;   color: #000;  }
+  .place_list  li  .txt {    padding: 10px 30px 0;
+      line-height: 1.8;     color: #666;    }
+  .place_list  li  .view {   border-top: 2px solid #333;
+        color: #666;   padding-top:5px;   margin-top:20px; 
+        display:inline-block; }  
+  
+  .popupBox { display:none }
+  .popupBox.on {
+    display:block;
+    position:absolute;
+    top:0;
+    left:0;
+    right:0;
+    bottom:0;
+    background:rgba(0,0,0,0.7);
+    z-index:999999999999999
+  }
+  .popupBox.on  .inner {
+    position:absolute;
+    top:520px;
+    left:50%;
+    transform:translate(-50%);
+    background:#fff;
+    text-align:center;
+    padding:20px; 
+  }
+  .popupBox.on  h3 {
+    font-size:30px; 
+    font-weight:bold;
+    padding:20px  0px;
+  }
+  .popupBox.on  p {
+    font-size:20px; 
+    padding:20px  0px;
+    width:80%;
+    margin:0 auto;
+    line-height:1.5
+  }
+  .popupBox.on  button.close {
+    font-size:50px;
+    color:#fff;
+    position:absolute;
+    top:-45px; 
+    right:-45px; 
+    background:none;
+    border:none;
+  }
+  .popupBox.on  button.arrow {
+     font-size:80px;  color:#fff; position:absolute; top:50%; transform:translateY(-50%);
+     background:none; border:none
+  }
+  .popupBox.on  button.prev {  left:-80px }
+  .popupBox.on  button.next {  right:-80px }
+  
+
+
+/*gotop 버튼 */
+.gotop{
+    display: none;
+    position: fixed;
+    right: 20px;
+    bottom: 20px;
+    z-index: 9999999999999;
+    opacity: 0;
+}
+.gotop.on {
+    display: block;   
+}
+.gotop img {
+    width: 90px;
+    cursor: pointer;
 }

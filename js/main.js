@@ -2,6 +2,8 @@
 
 (function($){
 
+    
+
     //top scoll bar
 	// 스크롤탑값에 따라 헤더아래쪽 선의 넓이 변경하기    
     var scrollSize = $(document).height() - $('#header').height() - $(window).height();
@@ -47,6 +49,7 @@
 });
 
 
+
 // 슬라이더 
     $('.slideInner').slick({
         autoplay: true, // 자동재생
@@ -66,6 +69,18 @@
         nextArrow: '<button class="nextArrow marrow"><i class="fas fa-angle-right"></i></button>',
         })
 
+        // $(".plpau").toggle(
+        //     function(){
+        //         $(this).find('i').removeClass('fa-pause')
+        //         .addClass('fa-play')
+        //         $(".slideInner").slick("slickPause")
+        //     },
+        //     function(){
+        //         $(this).find('i').removeClass('fa-play')
+        //         .addClass('fa-pause')
+        //         $(".slideInner").slick("slickPlay")
+        //     } 
+        // )
 
 
 
@@ -90,12 +105,38 @@
             $('.board, .youtube, .contact').removeClass('on')
         }
         
+        var pic4Near =$('.businessInfo').offset().top - $(this).height()/1.5
+        if(sct >= pic4Near) {
+            $('.businessInfo').addClass('on')
+        }else {
+            $('.businessInfo').removeClass('on')
+        }
 
 
 
 
+
+        var sct = 0;
+        sct=$(this).scrollTop();
+        if (sct>=100) {
+            $('.gotop').addClass('on').stop().animate({
+                opacity: '1'
+            },500)
+        } else {
+            $('.gotop').removeClass('on').stop().animate({
+                opacity:'0'
+            },500)
+        }
     })
 
+    // gotop버튼을 클릭하면 맨위로 움직이게 하기
+    $('.gotop').on('click', function(){
+        $('html, body').stop().animate({
+            scrollTop : '0px'
+        },700, 'linear')
+    })
+    
+    
 // 수정해야함 게시판 영역 notice영역이 2개일떄
     // $('.tabTit li').each(function(i){
     //     $(this).find('a').on('click', function(e){
@@ -141,6 +182,8 @@
         $('#leeBox').load(url)
     })
 
+    
+
     // // 버튼 소메뉴
     // $('#notice .background .costomenu a').on('click',function(e){
     //     e.preventDefault()
@@ -161,6 +204,56 @@
     //         .siblings().fadeOut(100)
     //     })
     // })
+
+
+
+    // 미니슬라이드
+    $(".profile_ullist").slick({
+        autoplay:true,  // 자동재생
+        autoplaySpeed:3000, // 간격시간
+        dots:false, // 동그라미버튼
+        speed:600, // 바뀌는시간(생략가능)
+        centerMode:true,
+        centerPadding:"90px",
+        slidesToShow:3, // 보여질슬라이드수
+        slidesToScroll:1, // 이동슬라이드수
+        pauseOnHover:true, // 마우스오버시 멈춤여부(생략가능)
+        pauseOnDotsHover:true, // 동그라미번호버튼에 호버시 멈춤여부(생략가능)
+        pauseOnFocus:false,  // 동그라미번호버튼 클릭시 자동실행 멈춤여부
+        cssEase:'linear', // 속도함수(생략가능)
+        draggable:true, // 마우스드래그시 슬라이드 교체가능여부(생략가능)
+        fade:false, // 슬라이드가 수평으로 이동하지 않고, 제자리에서 사라지고 나타남(생략가능)
+        arrows:true, // 좌우화살표 사용여부(생략가능)
+        prevArrow: '<button class="prevArrow  marrow"><i class="fas fa-angle-left"></i></button>',
+        nextArrow: '<button class="nextArrow  marrow"><i class="fas fa-angle-right"></i></button>',
+        responsive:[{
+                breakpoint: 800,
+                settings:{
+                        centerMode:true,
+                        centerPadding:"100px",
+                        slidesToShow:1, // 보여질슬라이드수(생략가능)
+                }
+        }]
+})
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 

@@ -9,16 +9,19 @@
         
     })
 
-    $('.depth1 > li').hover(
-        function(){
-            $(this).find('.depth2')
-            .stop().slideDown(700)
-        },
-        function(){
-            $(this).find('.depth2')
-            .stop().slideUp(500)
-        }
-    )
+    
+// 메뉴들 후버후 마우스 이동시 문제발생!!
+
+    // $('.depth1 > li').hover(
+    //     function(){
+    //         $(this).find('.depth2')
+    //         .stop().slideDown(700)
+    //     },
+    //     function(){
+    //         $(this).find('.depth2')
+    //         .stop().slideUp(500)
+    //     }
+    // )
 
     // 인덱스 introAni
     // setInterval 1초에 한번씩 가동 숫자를 -1씩 감소시키는 text method, clearInterval
@@ -103,7 +106,6 @@
 
 
     
-
 
 
 

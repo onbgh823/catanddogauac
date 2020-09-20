@@ -166,9 +166,9 @@
 }
 
 .maps .maps_box {height: 350px;}
-.maps .maps_box iframe{
+/* .maps .maps_box iframe{
     filter: grayscale();
-}
+} */
 
 /* ================================== */
 
@@ -335,3 +335,4 @@ height: 400px;}
     width: 100%;
     text-align: center;
 } */
+
