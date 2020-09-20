@@ -238,8 +238,68 @@
 
 
 
+// main product
+var lieq;   // 전역변수
+$(".product_list > li > a").on("click", function(e){
+        e.preventDefault();
+        lieq = $(this).parent().index()
+        var href = $(this).attr("href")
+        var src = $(this).attr("data-src")
+        var text = $(this).find("h3").text()
+        var info = $(this).find("p").text()
+        var alt = $(this).find("img").attr("alt")
+        $(".popupBox").addClass("on")
+        if (winWidth <= 799 ) {
+                var litop = $(this).parent().offset().top;
+                $(".popupBox  .inner").css({
+                        top:litop,
+                        width:"80%",
+                        left:"0%",
+                        transform:"translate(0%)",
+                        margin:"0  10%"
+                })
+        }
+        $(".popupBox   .inner  h3").text(text)
+        $(".popupBox   .inner   p").text(info)
+        $(".popupBox   .inner   div  a").attr("href", href)
+        $(".popupBox   .inner   div  img").attr("src", src).attr("alt", alt).attr("width", "100%")
+})
 
+$(".popupBox  button.close").on("click", function(){
+        $(this).parents(".popupBox").removeClass("on")
+})
 
+$(".popupBox   button.next").on("click", function(){
+       ++lieq;     //   0, 1, 2, 0, 
+       if ( lieq == $(".place_list >li").length ) {
+               lieq = 0;
+       }
+       var href = $(".product_list > li").eq(lieq).find("a").attr("href")
+        var src = $(".product_list > li").eq(lieq).find("a").attr("data-src")
+        var text = $(".product_list > li").eq(lieq).find("a").find("h3").text()
+        var info = $(".product_list > li").eq(lieq).find("a").find("p").text()
+        var alt = $(".product_list > li").eq(lieq).find("a").find("img").attr("alt")
+       $(".popupBox   .inner  h3").text(text)
+       $(".popupBox   .inner   p").text(info)
+       $(".popupBox   .inner   div  a").attr("href", href)
+       $(".popupBox   .inner   div  img").attr("src", src).attr("alt", alt).attr("width", "100%")
+})
+
+$(".popupBox   button.prev").on("click", function(){
+        --lieq;     //   2, 1, 0, 2, 1, 0
+        if ( lieq < 0 ) {
+                lieq = 2;
+        }
+        var href = $(".product_list > li").eq(lieq).find("a").attr("href")
+         var src = $(".product_list > li").eq(lieq).find("a").attr("data-src")
+         var text = $(".product_list > li").eq(lieq).find("a").find("h3").text()
+         var info = $(".product_list > li").eq(lieq).find("a").find("p").text()
+         var alt = $(".product_list > li").eq(lieq).find("a").find("img").attr("alt")
+        $(".popupBox   .inner  h3").text(text)
+        $(".popupBox   .inner   p").text(info)
+        $(".popupBox   .inner   div  a").attr("href", href)
+        $(".popupBox   .inner   div  img").attr("src", src).attr("alt", alt).attr("width", "100%")
+ })
 
 
 

@@ -674,6 +674,7 @@
     text-align: center;
     position: relative;
     padding-bottom: 25px;
+    margin-bottom: 20px;
 }
 .product h2:after {
     content: '';width: 60px;
@@ -682,13 +683,79 @@
     bottom: 0; left: 50%;margin-left: -30px;
     background: #1f1f1f;
 }
+/* ------------------------------ */
+.product_box {
+    padding: 40px 0;
+    /* border: 1px solid black; */
+    box-shadow: 20px 10px 15px rgb(0, 0, 0,0.7);}
+/* .product_list {position: relative;} */
 .product_list li {
+    float: left;
     width: 24.65%;
-    display: inline-block;
-    padding: 50px 10px 0px;
+    /* display: inline-block; */
+    margin-left:0.46%;
+    position:relative; top:30px; text-align:center
 }
-.product_list li img {width: 100%;}
-.product_list li span {
+.product_list li:first-child {
+    margin-left: 0.02%;
+}
+.product_list li .imabox {
+    overflow:hidden; 
+    position:relative; 
+}
+.product_list li .imabox img {
+    width: 100%;
+    transition: all 0.5s;
+}
+.product_list li .imabox img:hover {
+    opacity: 0.7; 
+    transition: all 0.5s;
+    transform:scale(1.3)
+}
+/* ------------------------------- */
+.product_list li .imabox:after { 
+    content:"";
+    position:absolute;
+    transition:all  0.4s;
+    top:50%; left:50%;
+    bottom:50%; right:50%; 
+    background:rgba(0,0,0,0.3); }
+ .product_list li .imabox:hover:after {
+    top:0%; left:0%; 
+    bottom:0%; right:0%;
+}
+ .product_list li .imabox:before {
+
+    content:"\f00e";
+    font-family:'Font Awesome 5 Free'; 
+    font-weight:900 !important;
+    color:#fff;
+    font-size:30px;
+    position:absolute; top:50%; left:50%;
+    transform:translate(-50%, -50%);
+    opacity:0; 
+    transition:all  0.8s  0.4s;  z-index:99999999 
+}
+ .product_list li .imabox:hover:before {
+    opacity:1 
+}
+
+
+/* ------------------------------- */
+
+.product_list li .txt {
+    padding: 10px 30px 0;
+    line-height: 1.8;
+    color: #666;
+}
+.product_list li .view {
+    border-top: 2px solid #333;
+    color: #666;
+    padding-top:5px;
+    margin-top:20px; 
+    display:inline-block;
+}  
+.product_list li h3 {
     text-align: center;
     display: block;
     color: #6e6e6e;
@@ -698,64 +765,16 @@
     transition: all 0.5s;
 }
 
-.product_list li a img:hover {
-    opacity: 0.7; transition: all 0.5s;
-}
-.product_list li img:hover +span {
+.product_list li img:hover +h3 {
     background: rgba(199,22,45,1.00);
     color: #fff;
 }
-.product_list li a > span:hover {
+.product_list li a > h3:hover {
     background: rgba(199,22,45,1.00);
 }
 
-
-
-
-/* 다시 찾는 인기여행지 top3 */
-.about_area  h2 {
-    padding: 55px 0 105px;
-    text-align: center;
-    font-size: 40px;
-  }
-  .about_box {
-    background: #f4f0e9;
-  }
-  .place_list   li { float:left; width:32%; margin-left:2%;
-    position:relative; top:-50px; text-align:center }
-  .place_list   li:first-child { margin-left:0%  }
-  /* nth-child(n), last-child는 first-child에 비해 호환성이 낮음 */
-  .place_list  li  .imgbox { height:328px; overflow:hidden; 
-    position:relative; }
-  .place_list  li  .imgbox  img { transition:all 0.4s }
-  .place_list  li  .imgbox:hover  img { transform:scale(1.1) }
-  .place_list  li  .imgbox:after { content:"";
-     position:absolute; transition:all  0.4s;
-    top:50%; left:50%; bottom:50%; right:50%; 
-    background:rgba(0,0,0,0.3); }
-  .place_list  li  .imgbox:hover:after  {
-    top:0%; left:0%; bottom:0%; right:0%; }
-  .place_list  li  .imgbox:before  {
-    content:"\f00e";
-    font-family:'Font Awesome 5 Free'; 
-    font-weight:900 !important;
-    color:#fff;
-    font-size:30px;
-    position:absolute; top:50%; left:50%;
-    transform:translate(-50%, -50%);
-    opacity:0;  transition:all  0.4s  0.2s;  z-index:99999999  }
-  .place_list  li  .imgbox:hover:before  { opacity:1  }
-  
-  
-  .place_list  li   h3 {   font-weight: bold;   font-size: 18px;
-    padding-top: 25px;   color: #000;  }
-  .place_list  li  .txt {    padding: 10px 30px 0;
-      line-height: 1.8;     color: #666;    }
-  .place_list  li  .view {   border-top: 2px solid #333;
-        color: #666;   padding-top:5px;   margin-top:20px; 
-        display:inline-block; }  
-  
-  .popupBox { display:none }
+/* --------팝업박스---------------*/
+.popupBox { display:none }
   .popupBox.on {
     display:block;
     position:absolute;
@@ -802,6 +821,8 @@
   }
   .popupBox.on  button.prev {  left:-80px }
   .popupBox.on  button.next {  right:-80px }
+
+
   
 
 
