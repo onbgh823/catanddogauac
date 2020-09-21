@@ -39,10 +39,10 @@
                                         <label for="email_lbl" class="tit_lbl obligadeux">이메일</label>
                                         <div class="info_content">
                                             <input type="text" id="email_lbl" class="400" placeholder="이메일이 뭐에요?"> <span>@</span>
-                                            <input type="text">
+                                            <input type="text" class="domain" disabled>
                                             <label class="email_box">
                                                 <select id="email_choisi">
-                                                    <option value="nonschoisi">choisi votre email...</option>
+                                                    <option value="nonschoisi">choisir votre email</option>
                                                     <option value="self">직접입력</option>
                                                     <option value="naver.com">네이버</option>
                                                     <option value="daum.net">다음</option>
@@ -53,9 +53,16 @@
                                         </div>
                                     </li>
                                     <li>
+                                        <label for="id_lbl" class="tit_lbl obligadeux">아이디</label>
+                                        <div class="info_content">
+                                            <input type="text" id="id_lbl" class="w400 idch" placeholder="글자수 3~10, 특수문자제외">
+                                            <input type="checkbox" id="idsave" name="idsave" checked>
+                                        </div>
+                                    </li>
+                                    <li>
                                         <label for="name_lbl" class="tit_lbl obligadeux">국문이름</label>
                                         <div class="info_content">
-                                            <input type="text" id="name_lbl" class="w400" placeholder="이름을 입력해줘요 니이름 내이름 개이름">
+                                            <input type="text" id="name_lbl" class="w400" placeholder="이름을 입력해줘요 니이름 내이름 개이름 캣이름">
                                         </div>
                                     </li>
                                     <li>
@@ -67,13 +74,61 @@
                                     <li>
                                         <label for="motdepasse_lbl" class="tit_lbl obligadeux">비밀번호</label>
                                         <div class="info_content">
-                                            <input type="password" id="motdepasse" class="w400" placeholder="아무도 모르게 비밀번호를 입력해 주세요!!!">
+                                            <input type="password" id="motdepasse_lbl" class="w400 mdpch" placeholder="아무도 모르게 비밀번호를 입력해 주세요!!!">
                                         </div>
                                     </li>
                                     <li>
-                                        <label for="phone_lbl" class=" tit_lbl obligadeux">연락처</label>
+                                        <label for="motdepasseok_lbl" class="tit_lbl obligadeux">비밀번호확인</label>
                                         <div class="info_content">
-                                            <input type="tel" id="phone_lbl" class="w400" placeholder='휴대폰번호 "-" 없이 숫자만 입력해주세요'>
+                                            <input type="password" id="motdepasseok_lbl" class="w400 mdpokch" placeholder="비밀번호를 다시 한번 입력해주세요.">
+                                        </div>
+                                    </li>
+                                    <li>
+                                        <label for="phone_lbl" class=" tit_lbl obligadeux">LandLine 연락처</label>
+                                        <div class="info_content">
+                                            
+                                           
+                                            <label class="email_box">
+                                                <select id="local_choisi">
+                                                    <option value="nonschoisi">지역번호를 선택해주세요</option>
+                                                    <option value="02">서울</option>
+                                                    <option value="051">부산</option>
+                                                    <option value="053">대구</option>
+                                                    <option value="032">인천</option>
+                                                    <option value="062">광주</option>
+                                                    <option value="042">대전</option>
+                                                    <option value="052">울산</option>
+                                                    <option value="044">세종</option>
+                                                    <option value="031">경기</option>
+                                                    <option value="033">강원</option>
+                                                    <option value="043">충북</option>
+                                                    <option value="041">충남</option>
+                                                    <option value="063">전북</option>
+                                                    <option value="061">전남</option>
+                                                    <option value="054">경북</option>
+                                                    <option value="055">경남</option>
+                                                    <option value="064">제주</option>
+                                                </select>    
+                                            </label>
+                                            <input type="text" id="local" disabled>
+                                            <input type="tel" id="phone_lbl" class="w400" placeholder='지역번호 "-" 없이 숫자만 입력해주세요'>
+                                        </div>
+                                    </li>
+                                    <li>
+                                        <label for="phone_lbl" class=" tit_lbl obligadeux">모바일 연락처</label>
+                                        <div class="info_content">
+                                            <label class="email_box">
+                                                <select id="telecom_choisi">
+                                                    <option value="nonschoisi">통신사를 선택해주세요</option>
+                                                    <option value="SKT">SKT</option>
+                                                    <option value="KT">KT</option>
+                                                    <option value="LGU+">LGU+</option>
+                                                    <option value="알뜰폰">알뜰폰</option>
+                                                </select>    
+                                            </label>
+                                            <input type="text" name="tel1" id="tel1">-
+				                            <input type="text" name="tel2" id="tel2">-
+				                            <input type="text" name="tel3" id="tel3">
                                         </div>
                                     </li>
                                     <li>
@@ -107,6 +162,7 @@
                                             </select>
                                             <span>월</span>
                                             <input type="text" id="jours_lbl" class="w200" placeholder="태어난 날"><span>일</span>
+                                            <input id="datenaissance" type="text" name="birth">
                                         </div>
                                     </li>
                                     <li>
@@ -123,21 +179,34 @@
                                     <li>
                                         <label for="hoddy_lbl" class="tit_lbl">취미</label>
                                         <div class="info_content hobby_area">
-                                            <input type="checkbox" id="all" value="all">
+                                            <input type="checkbox" id="all" name="all" value="all">
                                             <label for="all">전체선택</label>
-                                            <input type="checkbox" id="hob1" value="hob1">
+                                            <input type="checkbox" id="hob1" name="hob1" value="hob1">
                                             <label for="hob1">취미1</label>
-                                            <input type="checkbox" id="hob2" value="hob2">
+                                            <input type="checkbox" id="hob2" name="hob2" value="hob2">
                                             <label for="hob2">취미2</label>
-                                            <input type="checkbox" id="hob3" value="hob3">
+                                            <input type="checkbox" id="hob3" name="hob3" value="hob3">
                                             <label for="hob3">취미3</label>
-                                            <input type="checkbox" id="hob4" value="hob4">
+                                            <input type="checkbox" id="hob4" name="hob4" value="hob4">
                                             <label for="hob4">취미4</label>
-                                            <input type="checkbox" id="hob5" value="hob5">
+                                            <input type="checkbox" id="hob5" name="hob5" value="hob5">
                                             <label for="hob5">취미5</label>
                                         </div>
                                     </li>
                                     <li>
+                                        <label for="hoddy_lbl" class="tit_lbl">스킬</label>
+                                        <div class="info_content hobby_area">
+                                            <input type="checkbox" id="tout" name="tout" value="tout">
+                                            <label for="tout">전체선택</label>
+                                            <input type="checkbox" id="gout1" name="gout1" value="gout1">
+                                            <label for="gout1">html</label>
+                                            <input type="checkbox" id="gout2" name="gout2" value="gout2">
+                                            <label for="gout2">css</label>
+                                            <input type="checkbox" id="gout3" name="gout3" value="gout3">
+                                            <label for="gout3">javascript</label>
+                                        </div>
+                                    </li>
+                                    <!-- <li>
                                         <label for="contact_lbl" class="tit_lbl">문의내용</label>
                                         <div class="info_content">
                                             <textarea name="query" id="query" placeholder="간단한 상담요청 사항을 남겨주시면 보다
@@ -145,7 +214,7 @@
         (100글자이내)" maxlength="100"></textarea>
                                             <p>남은글자: <span>100</span>글자</p>
                                         </div>
-                                    </li>
+                                    </li> -->
                                 </ul>
                                 <div class="btn">
                                     <input type="submit" value="전송하기">
@@ -171,6 +240,46 @@
         .siblings().fadeOut(100)
         
     })
+
+    // 우편번호 찾기
+		function sample4_execDaumPostcode() {
+			new daum.Postcode({
+				oncomplete: function (data) {
+					// 팝업에서 검색결과 항목을 클릭했을때 실행할 코드를 작성하는 부분.
+
+					// 도로명 주소의 노출 규칙에 따라 주소를 표시한다.
+					// 내려오는 변수가 값이 없는 경우엔 공백('')값을 가지므로, 이를 참고하여 분기 한다.
+					var roadAddr = data.roadAddress; // 도로명 주소 변수
+					var extraRoadAddr = ''; // 참고 항목 변수
+
+					// 법정동명이 있을 경우 추가한다. (법정리는 제외)
+					// 법정동의 경우 마지막 문자가 "동/로/가"로 끝난다.
+					if (data.bname !== '' && /[동|로|가]$/g.test(data.bname)) {
+						extraRoadAddr += data.bname;
+					}
+					// 건물명이 있고, 공동주택일 경우 추가한다.
+					if (data.buildingName !== '' && data.apartment === 'Y') {
+						extraRoadAddr += (extraRoadAddr !== '' ? ', ' + data.buildingName : data.buildingName);
+					}
+					// 표시할 참고항목이 있을 경우, 괄호까지 추가한 최종 문자열을 만든다.
+					if (extraRoadAddr !== '') {
+						extraRoadAddr = ' (' + extraRoadAddr + ')';
+					}
+
+					// 우편번호와 주소 정보를 해당 필드에 넣는다.
+					document.getElementById('sample4_postcode').value = data.zonecode;
+					document.getElementById("sample4_roadAddress").value = roadAddr;
+					document.getElementById("sample4_jibunAddress").value = data.jibunAddress;
+
+					// 참고항목 문자열이 있을 경우 해당 필드에 넣는다.
+					if (roadAddr !== '') {
+						document.getElementById("sample4_extraAddress").value = extraRoadAddr;
+					} else {
+						document.getElementById("sample4_extraAddress").value = '';
+					}
+				}
+			}).open();
+		}
 
 </script>
 <!-- 유효성 체크 -->
