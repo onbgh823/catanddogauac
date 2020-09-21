@@ -82,6 +82,7 @@
     //     $('#leeContainer').remove()
     //     $('#leeBox').load(url)
     // })
+    // 메뉴이동
     $('.topmenu .login > a').on('click', function(){
         var url = $(this).attr('href')
         $('#leeContainer').remove()

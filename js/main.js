@@ -93,7 +93,7 @@
 
         if(sct >= pic4Near) {
             $('.pic4menu').addClass('on')
-        }else {
+        }else if (sct===0) {
             $('.pic4menu').removeClass('on')
         }
         
@@ -101,14 +101,14 @@
         
         if(sct >= pic4Near) {
             $('.board, .youtube, .contact').addClass('on')
-        }else {
+        }else if (sct===0){
             $('.board, .youtube, .contact').removeClass('on')
         }
         
         var pic4Near =$('.businessInfo').offset().top - $(this).height()/1.5
         if(sct >= pic4Near) {
             $('.businessInfo').addClass('on')
-        }else {
+        }else if (sct===0){
             $('.businessInfo').removeClass('on')
         }
 
@@ -249,56 +249,71 @@ $(".product_list > li > a").on("click", function(e){
         var info = $(this).find("p").text()
         var alt = $(this).find("img").attr("alt")
         $(".popupBox").addClass("on")
-        if (winWidth <= 799 ) {
-                var litop = $(this).parent().offset().top;
-                $(".popupBox  .inner").css({
-                        top:litop,
-                        width:"80%",
-                        left:"0%",
-                        transform:"translate(0%)",
-                        margin:"0  10%"
-                })
-        }
-        $(".popupBox   .inner  h3").text(text)
-        $(".popupBox   .inner   p").text(info)
-        $(".popupBox   .inner   div  a").attr("href", href)
-        $(".popupBox   .inner   div  img").attr("src", src).attr("alt", alt).attr("width", "100%")
+        $(".popupBox  .inner  h3").text(text)
+        $(".popupBox  .inner   p").text(info)
+        $(".popupBox  .inner   div  a").attr("href", href)
+        $(".popupBox  .inner   div  img")
+        .attr({
+            src:src,
+            alt:alt
+            // maxHeight:"100%"
+        })
+        // if (winWidth <= 799 ) {
+        //         var litop = $(this).parent().offset().top;
+        //         $(".popupBox  .inner").css({
+        //                 top:litop,
+        //                 width:"80%",
+        //                 left:"0%",
+        //                 transform:"translate(0%)",
+        //                 margin:"0  10%"
+        //         })
+        // }
 })
 
 $(".popupBox  button.close").on("click", function(){
         $(this).parents(".popupBox").removeClass("on")
 })
 
-$(".popupBox   button.next").on("click", function(){
+$(".popupBox button.next").on("click", function(){
        ++lieq;     //   0, 1, 2, 0, 
-       if ( lieq == $(".place_list >li").length ) {
+       if ( lieq === $(".product_list >li").length ) {
                lieq = 0;
        }
-       var href = $(".product_list > li").eq(lieq).find("a").attr("href")
+        var href = $(".product_list > li").eq(lieq).find("a").attr("href")
         var src = $(".product_list > li").eq(lieq).find("a").attr("data-src")
         var text = $(".product_list > li").eq(lieq).find("a").find("h3").text()
         var info = $(".product_list > li").eq(lieq).find("a").find("p").text()
         var alt = $(".product_list > li").eq(lieq).find("a").find("img").attr("alt")
-       $(".popupBox   .inner  h3").text(text)
-       $(".popupBox   .inner   p").text(info)
-       $(".popupBox   .inner   div  a").attr("href", href)
-       $(".popupBox   .inner   div  img").attr("src", src).attr("alt", alt).attr("width", "100%")
+       $(".popupBox .inner  h3").text(text)
+       $(".popupBox .inner   p").text(info)
+       $(".popupBox .inner   div  a").attr("href", href)
+       $(".popupBox .inner   div  img")
+       .attr({
+        src:src,
+        alt:alt
+        // maxHeight:"100%"
+    })
 })
 
-$(".popupBox   button.prev").on("click", function(){
+$(".popupBox button.prev").on("click", function(){
         --lieq;     //   2, 1, 0, 2, 1, 0
         if ( lieq < 0 ) {
-                lieq = 2;
+                lieq = $(".product_list > li").length-1;
         }
         var href = $(".product_list > li").eq(lieq).find("a").attr("href")
          var src = $(".product_list > li").eq(lieq).find("a").attr("data-src")
          var text = $(".product_list > li").eq(lieq).find("a").find("h3").text()
          var info = $(".product_list > li").eq(lieq).find("a").find("p").text()
          var alt = $(".product_list > li").eq(lieq).find("a").find("img").attr("alt")
-        $(".popupBox   .inner  h3").text(text)
-        $(".popupBox   .inner   p").text(info)
-        $(".popupBox   .inner   div  a").attr("href", href)
-        $(".popupBox   .inner   div  img").attr("src", src).attr("alt", alt).attr("width", "100%")
+        $(".popupBox .inner  h3").text(text)
+        $(".popupBox .inner   p").text(info)
+        $(".popupBox .inner   div  a").attr("href", href)
+        $(".popupBox .inner   div  img")
+        .attr({
+            src:src,
+            alt:alt
+            // maxHeight:"100%"
+        })
  })
 
 

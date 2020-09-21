@@ -621,7 +621,7 @@
 }
 .banner .vid:before {
     content: '';
-    background:  rgba(255, 255, 255, 0.2);
+    background:rgba(255, 255, 255, 0.2);
     position: absolute;
     top: 0; left: 0; right: 0; bottom: 0;
     z-index: 9;
@@ -687,7 +687,7 @@
 .product_box {
     padding: 40px 0;
     /* border: 1px solid black; */
-    box-shadow: 20px 10px 15px rgb(0, 0, 0,0.7);}
+    box-shadow: 5px 5px 15px rgb(0, 0, 0,0.7);}
 /* .product_list {position: relative;} */
 .product_list li {
     float: left;
@@ -774,10 +774,12 @@
 }
 
 /* --------팝업박스---------------*/
-.popupBox { display:none }
-  .popupBox.on {
+.popupBox { 
+    display:none 
+}
+.popupBox.on {
     display:block;
-    position:absolute;
+    position:fixed;
     top:0;
     left:0;
     right:0;
@@ -785,21 +787,33 @@
     background:rgba(0,0,0,0.7);
     z-index:999999999999999
   }
-  .popupBox.on  .inner {
+.popupBox.on .inner {
     position:absolute;
-    top:520px;
+    top:50%;
     left:50%;
-    transform:translate(-50%);
+    transform:translate(-50%, -50%);
     background:#fff;
     text-align:center;
     padding:20px; 
+    height: 80%;
+    /* 특수한경우 높이 잡아야 */
   }
-  .popupBox.on  h3 {
+.popupBox.on .inner > div {
+    height: 70%;
+    text-align: center;}
+.popupBox.on .inner > div > a {
+    display: block; 
+    height: 100%;
+}
+  .popupBox.on .inner > div > a > img {
+    height: 100%;
+} 
+  .popupBox.on h3 {
     font-size:30px; 
     font-weight:bold;
     padding:20px  0px;
   }
-  .popupBox.on  p {
+  .popupBox.on p {
     font-size:20px; 
     padding:20px  0px;
     width:80%;
