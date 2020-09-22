@@ -12,16 +12,16 @@
     
 // 메뉴들 후버후 마우스 이동시 문제발생!!
 
-    // $('.depth1 > li').hover(
-    //     function(){
-    //         $(this).find('.depth2')
-    //         .stop().slideDown(700)
-    //     },
-    //     function(){
-    //         $(this).find('.depth2')
-    //         .stop().slideUp(500)
-    //     }
-    // )
+    $('.depth1 > li').hover(
+        function(){
+            $(this).find('.depth2')
+            .stop().slideDown(700)
+        },
+        function(){
+            $(this).find('.depth2')
+            .stop().slideUp(500)
+        }
+    )
 
     // 인덱스 introAni
     // setInterval 1초에 한번씩 가동 숫자를 -1씩 감소시키는 text method, clearInterval
@@ -161,28 +161,7 @@
         sct = $(this).scrollTop()
 
 
-        var pic4Near = $('.backcolor').offset().top - $(this).height()/1.5
-
-        if(sct >= pic4Near) {
-            $('.pic4menu').addClass('on')
-        }else if (sct===0) {
-            $('.pic4menu').removeClass('on')
-        }
         
-        var pic4Near =$('.cscenter').offset().top - $(this).height()/1.5
-        
-        if(sct >= pic4Near) {
-            $('.board, .youtube, .contact').addClass('on')
-        }else if (sct===0){
-            $('.board, .youtube, .contact').removeClass('on')
-        }
-        
-        var pic4Near =$('.businessInfo').offset().top - $(this).height()/1.5
-        if(sct >= pic4Near) {
-            $('.businessInfo').addClass('on')
-        }else if (sct===0){
-            $('.businessInfo').removeClass('on')
-        }
 
 
 
@@ -220,11 +199,11 @@
     // 0922
  //top scoll bar
 	// 스크롤탑값에 따라 헤더아래쪽 선의 넓이 변경하기    
-    
+    var sct;
     var flag = true;
     $(window).on('scroll',function() {
         var scrollSize = $(document).height() - $('#header').height() - $(window).height();
-        var sct = $(this).scrollTop();
+        sct = $(this).scrollTop();
         var wid = (sct/scrollSize)*100 + '%';
             //스트롤할때 가로로 바가 이동
             $('.scrolling-bar')
@@ -259,10 +238,38 @@
     }
 //  not working
 
-    
+    if($('#leeContainer').children().is('#section')) {
+        mainScroll()
+    }
 
 });
 
+    function mainScroll(){
+
+        var pic4Near = $('.backcolor').offset().top - $(this).height()/1.5
+
+        if(sct >= pic4Near) {
+            $('.pic4menu').addClass('on')
+        }else if (sct===0) {
+            $('.pic4menu').removeClass('on')
+        }
+        
+        var pic4Near =$('.cscenter').offset().top - $(this).height()/1.5
+        
+        if(sct >= pic4Near) {
+            $('.board, .youtube, .contact').addClass('on')
+        }else if (sct===0){
+            $('.board, .youtube, .contact').removeClass('on')
+        }
+        
+        var pic4Near =$('.businessInfo').offset().top - $(this).height()/1.5
+        if(sct >= pic4Near) {
+            $('.businessInfo').addClass('on')
+        }else if (sct===0){
+            $('.businessInfo').removeClass('on')
+        }
+
+    }
 
 
      // 0922

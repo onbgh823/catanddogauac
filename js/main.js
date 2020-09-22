@@ -165,30 +165,37 @@
         $('#leeBox').load(url)
     })
     
-    $('.backcolor .pic4menu .costomer > a').on('click', function(e){
+
+    $('.column > div > a').on('click', function(e){
         e.preventDefault()
         var url = $(this).attr('href')
         $('#leeContainer').remove()
         $('#leeBox').load(url)
     })
-    $('.backcolor .pic4menu .business > a').on('click', function(e){
-        e.preventDefault()
-        var url = $(this).attr('href')
-        $('#leeContainer').remove()
-        $('#leeBox').load(url)
-    })
-    $('.backcolor .pic4menu .company > a').on('click', function(e){
-        e.preventDefault()
-        var url = $(this).attr('href')
-        $('#leeContainer').remove()
-        $('#leeBox').load(url)
-    })
-    $('.backcolor .pic4menu .product > a').on('click', function(e){
-        e.preventDefault()
-        var url = $(this).attr('href')
-        $('#leeContainer').remove()
-        $('#leeBox').load(url)
-    })
+    // $('.backcolor .pic4menu .costomer > a').on('click', function(e){
+    //     e.preventDefault()
+    //     var url = $(this).attr('href')
+    //     $('#leeContainer').remove()
+    //     $('#leeBox').load(url)
+    // })
+    // $('.backcolor .pic4menu .business > a').on('click', function(e){
+    //     e.preventDefault()
+    //     var url = $(this).attr('href')
+    //     $('#leeContainer').remove()
+    //     $('#leeBox').load(url)
+    // })
+    // $('.backcolor .pic4menu .company > a').on('click', function(e){
+    //     e.preventDefault()
+    //     var url = $(this).attr('href')
+    //     $('#leeContainer').remove()
+    //     $('#leeBox').load(url)
+    // })
+    // $('.backcolor .pic4menu .product > a').on('click', function(e){
+    //     e.preventDefault()
+    //     var url = $(this).attr('href')
+    //     $('#leeContainer').remove()
+    //     $('#leeBox').load(url)
+    // })
     // ---------------------------
 
     
