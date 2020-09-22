@@ -156,7 +156,7 @@
 // 스크롤이벤트는 html, body 태그가 있는 온전한 페이지 index.html에서만 작동되므로 common.js 파일로 합치는게 맞습니다.
 
     // common.js 에 모든 페이지의 스크롤이벤트를 합쳐 놓는다.
-
+    
     $(window).scroll(function(){
         var sct = $(this).scrollTop()
 
