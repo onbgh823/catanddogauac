@@ -105,10 +105,161 @@
     //     $('#leeBox').load(url)
     // })
 
+// -------------------------------
 
+// ----------------------------------
+
+
+
+     //0922
+    // 공지사항페이지 로드하는거 헤더와 풋터가 나타남
+    // $('.tabTit > a').on('click', function(e){
+    //     e.preventDefault()
+    //     var url = $(this).attr('href')
+    //     $('#leeContainer').remove()
+    //     $('#leeBox').load(url)
+    // })
+    
+    // $('.backcolor .pic4menu .costomer > a').on('click', function(e){
+    //     e.preventDefault()
+    //     var url = $(this).attr('href')
+    //     $('#leeContainer').remove()
+    //     $('#leeBox').load(url)
+    // })
+    // $('.backcolor .pic4menu .business > a').on('click', function(e){
+    //     e.preventDefault()
+    //     var url = $(this).attr('href')
+    //     $('#leeContainer').remove()
+    //     $('#leeBox').load(url)
+    // })
+    // $('.backcolor .pic4menu .company > a').on('click', function(e){
+    //     e.preventDefault()
+    //     var url = $(this).attr('href')
+    //     $('#leeContainer').remove()
+    //     $('#leeBox').load(url)
+    // })
+    // $('.backcolor .pic4menu .product > a').on('click', function(e){
+    //     e.preventDefault()
+    //     var url = $(this).attr('href')
+    //     $('#leeContainer').remove()
+    //     $('#leeBox').load(url)
+    // })
+
+
+
+
+
+
+// ---------------------------------
+
+// 0922
+// 스크롤이벤트는 html, body 태그가 있는 온전한 페이지 index.html에서만 작동되므로 common.js 파일로 합치는게 맞습니다.
+
+    // common.js 에 모든 페이지의 스크롤이벤트를 합쳐 놓는다.
+
+    $(window).scroll(function(){
+        var sct = $(this).scrollTop()
+
+
+        var pic4Near = $('.backcolor').offset().top - $(this).height()/1.5
+
+        if(sct >= pic4Near) {
+            $('.pic4menu').addClass('on')
+        }else if (sct===0) {
+            $('.pic4menu').removeClass('on')
+        }
+        
+        var pic4Near =$('.cscenter').offset().top - $(this).height()/1.5
+        
+        if(sct >= pic4Near) {
+            $('.board, .youtube, .contact').addClass('on')
+        }else if (sct===0){
+            $('.board, .youtube, .contact').removeClass('on')
+        }
+        
+        var pic4Near =$('.businessInfo').offset().top - $(this).height()/1.5
+        if(sct >= pic4Near) {
+            $('.businessInfo').addClass('on')
+        }else if (sct===0){
+            $('.businessInfo').removeClass('on')
+        }
+
+
+
+
+
+        var sct = 0;
+        sct=$(this).scrollTop();
+        if (sct>=100) {
+            $('.gotop').addClass('on').stop().animate({
+                opacity: '1'
+            },500)
+        } else {
+            $('.gotop').removeClass('on').stop().animate({
+                opacity:'0'
+            },500)
+        }
+    })
     
 
 
+
+
+    // 0922
+ //top scoll bar
+	// 스크롤탑값에 따라 헤더아래쪽 선의 넓이 변경하기    
+    
+    var flag = true;
+    $(window).on('scroll',function() {
+        var scrollSize = $(document).height() - $('#header').height() - $(window).height();
+        var sct = $(this).scrollTop();
+        var wid = (sct/scrollSize)*100 + '%';
+            //스트롤할때 가로로 바가 이동
+            $('.scrolling-bar')
+            .css({
+                zIndex : 99999999,
+                opacity : 1, 
+                width : wid
+            });
+    // 스크롤탑값에 따라 헤더구역 고정시키기
+        if (sct >= 131 && flag) {
+            $('#header').css({
+                position:'fixed',
+                opacity:'0',
+                height:'0px',
+                backgroundColor:'rgb(255,99,71)'
+            }).stop().animate({
+                height:'131px',
+                opacity:'1'
+            },500)
+            flag = false;
+    } else if (sct===0 && !flag) {
+        $('#header').css({
+            position:'relative',
+            height:'0',
+            opacity:'0'
+        }).stop().animate({
+            opacity:1,
+            height:'131px',
+            backgroundColor:'rgb(255,99,71)'
+        },500)
+        flag=true
+    }
+//  not working
+
+    
+
+});
+
+
+
+     // 0922
+    // gotop버튼을 클릭하면 맨위로 움직이게 하기
+    // $('.gotop').on('click', function(){
+    //     $('html, body').stop().animate({
+    //         scrollTop : '0px'
+    //     },700, 'linear')
+    // })
 
 })(jQuery)
 

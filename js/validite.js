@@ -297,7 +297,7 @@ $('#telecom_choisi').on('change',function(){
 
 
 // 생년월일에 datepicker 연결하기
-$('#datenaissance').datepicker({ //jqueryui.com 에서 ui.css, ul.js images 파일로 옮겨라 main- stable 파일 다운로드
+$('#birth').datepicker({ //jqueryui.com 에서 ui.css, ul.js images 파일로 옮겨라 main- stable 파일 다운로드
     dateFormat: 'yy-mm-dd', //날짜형식
     changeMonth: 'true', //월 선택가능
     changeYear: 'true', // 년도 선택가능
@@ -313,10 +313,10 @@ $("#all").on("click", function () {
 })
 
 // 스킬 전체선택하기
-$("#tout").on("click", function () {
-    var cool = $(this).prop("checked")
-    $(".hobby_area > input:checkbox").prop("checked", cool);
-})
+// $("#tout").on("click", function () {
+//     var cool = $(this).prop("checked")
+//     $(".sskills > input:checkbox").prop("checked", cool);
+// })
 
 
 
