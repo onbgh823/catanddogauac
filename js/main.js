@@ -66,7 +66,7 @@
         pauseOnFocus: false, // 동그라미번호버튼 클릭시 자동실행 멈춤여부
         cssEase: 'linear', // 속도함수(생략가능)
         draggable: true, // 마우스드래그시 슬라이드 교체가능여부(생략가능)
-        fade: false, // 슬라이드가 수평으로 이동하지 않고, 제자리에서 사라지고 나타남(생략가능)
+        fade: true, // 슬라이드가 수평으로 이동하지 않고, 제자리에서 사라지고 나타남(생략가능)
         arrows: true, // 좌우화살표 사용여부(생략가능)
         prevArrow: '<button class="prevArrow marrow"><i class="fas fa-angle-left"></i></button>',
         nextArrow: '<button class="nextArrow marrow"><i class="fas fa-angle-right"></i></button>',

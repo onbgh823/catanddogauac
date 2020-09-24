@@ -24,6 +24,42 @@
     background-position: center;
     position: relative;
 }
+.slideInner .slide.slick-active {
+    animation: zoomOutmain 5s both;
+}
+/* 샘플 http://bdmp-005.cafe24.com/bizdemo94087/index.php
+ */
+
+@-webkit-keyframes zoomOutmain {
+    from {
+      opacity: 1;
+      -webkit-transform: scale3d(1.2, 1.2, 1.2);
+      transform: scale3d(1.2, 1.2, 1.2);
+    }
+  
+    to {
+      opacity: 1;
+      -webkit-transform: scale3d(1, 1, 1);
+      transform: scale3d(1, 1, 1);
+    }
+  
+  }
+  @keyframes zoomOutmain {
+    from {
+        opacity: 1;
+        -webkit-transform: scale3d(1.2, 1.2, 1.2);
+        transform: scale3d(1.2, 1.2, 1.2);
+    }
+      to {
+        opacity: 1;
+        -webkit-transform: scale3d(1, 1, 1);
+        transform: scale3d(1, 1, 1);
+      }
+    
+  }
+
+
+
 .slideInner .bg1
 {background-image: url(../images/main_metapo02.jpg);
 }
