@@ -113,7 +113,7 @@
     margin:0 0 100px;
 }
 /* 텍스트 애니메 */
-.slideInner .slide.slick-active .text   h2 {  animation:bounce  1s  both  0.5s  }
+.slideInner .slide.slick-active .text  h2 {  animation:bounce  1s  both  0.5s  }
 .slideInner .slide.slick-active .text h3{  animation:bounceInUp  1s  both  1s }
 .slideInner .slide.slick-active .text strong{  animation: fadeInRight 1s  both  1.5s  }
 .slideInner .slide.slick-active .text h4{  animation:fadeInLeft  1s  both  1.5s  }
