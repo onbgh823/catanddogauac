@@ -235,3 +235,110 @@
     인라인 블럭
     포지렐러
 } */
+
+/* 반응형 */
+@media screen and (max-width:1300px) {
+
+
+}
+
+@media screen and (max-width:1135px) {
+
+    .login_box .message {
+        background: rgb(243, 142, 124);
+        width:100%;
+        padding-left: 20px;
+        margin-left: 30px;
+        /* border: 1px solid green; */
+    }
+
+    .login_box .message p   {
+        padding: 12px 0;
+        font-size: 14px;
+    }
+
+    .login_win {
+        padding: 60px 0 50px;
+        width: 70%;
+        /* border: 5px solid salmon; */
+    }
+     
+    .sans_login {
+        padding: 20px 0 130px;
+        width: 70%;
+        /* border: 5px solid salmon; */
+    }
+    
+
+    .login_form .check {
+        text-align: right;
+        padding: 15px 0;
+    }
+    
+    .logo_website .shell {position: relative;
+    }
+    .logo_website .shell li {
+        position: absolute; 
+        left: 36%; transform: translate(-50%);width: 70%;
+    }
+    .logo_website .shell li button {
+        display: block;
+        width: 140%;
+        border-radius: 20px;
+        background-color: paleturquoise;
+        height: 50px;
+        line-height: 50px;
+    }
+    
+    
+
+    
+    
+
+}
+
+@media screen and (max-width:641px) {
+
+    .login_win {
+        padding: 60px 0 50px;
+        width: 90%;
+        /* border: 5px solid salmon; */
+    }
+
+    .sans_login {
+        padding: 20px 0 130px;
+        width: 90%;
+        /* border: 5px solid salmon; */
+    }
+
+}
+
+@media screen and (max-width:498px) {
+
+
+    .login_win {
+        padding: 60px 0 10px;
+        width: 95%;
+        /* border: 5px solid salmon; */
+    }
+
+    .sans_login {
+        padding: 20px 0 130px;
+        width: 95%;
+        /* border: 5px solid salmon; */
+    }
+
+    .login_win .help_box .helpus > button {
+        width: 32%;
+        height:30px;
+        border-radius: 20px;
+        background: #0099d2;
+        color: rgb(0, 0, 0);
+        transition: all 0.5s;
+    }
+    .login_win .help_box .helpus > button:hover {
+        background: tomato;
+    }
+    /* 후버대신 클릭으로 바꿔야함 js에서 하는 방법있는데 찾아야해 */
+
+}
