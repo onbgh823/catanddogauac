@@ -28,6 +28,7 @@
 .row {
     max-width: 1300px;
     margin: 0 auto;
+    /* border: 1px solid red; */
 }
 .topmenu .row { 
     position: relative;
@@ -61,7 +62,11 @@
 } 
 .logoNav {
     position: relative;
+    background-color: tomato;
+    height: 90px;
 }
+/* .logoNav h1 { 
+    border:1px solid blue;} */
 .logoNav .nav {
     position: absolute;
     top: 55%; right: 50px;
@@ -76,6 +81,7 @@
     /* background: red; */
     width: 129px;
     height: 90px;
+    /* border: 1px solid blue; */
 }
 .logoNav .nav .depth1 > li:hover .depth2 {
     display: block;
@@ -219,6 +225,9 @@ height: 400px;}
     padding: 25px 0;
     text-align: left;
 }
+.infocom li:nth-child(1) .space {
+    text-indent: 30px;
+}
 .infocom ul li > p {
     font-size: 12px;
     position: absolute;
@@ -250,12 +259,11 @@ height: 400px;}
 }
 .copyR span:first-child {color: tomato;}
 .under_sns {
+    /* border: 1px solid red; */
     font-size: 30px;
     color: #e0e0e0;
-    padding-bottom: 30px;
-    text-align: right;
-    position: absolute; top: 0;
-    right: 0;
+    position: absolute; top: 90%; left: 50%;
+    transform: translate(-50%,-50%);
 }
 .under_sns a:hover {
     color: tomato;

@@ -5,11 +5,31 @@
     .row {
         padding: 0 10px
     }
+   
+    
 }
 
 
-@media screen and (max-width:1122px) {
+@media screen and (max-width:1024px) {
+    
+    .logoNav {
+        position: relative;
+        height: 170px;
+    }
+    .logoNav h1 {text-align: center;}
+    .logoNav .nav {
+        position: relative;
+        top: 25%; right: 0px;
+        z-index: 99999999;    
+    }
+    .logoNav .nav .depth1 { text-align:center }
 
+    
+}
+
+@media screen and (max-width:1005px) {
+
+    
 }
 
 @media screen and (max-width:768px) {
