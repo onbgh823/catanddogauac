@@ -1,5 +1,27 @@
 @charset "utf-8";
 
-@media screen and (max-width:1300px) {
-    .row {}
+
+@media screen and (max-width:1299px) {
+    .row {
+        padding: 0 10px
+    }
+}
+
+
+@media screen and (max-width:1122px) {
+
+}
+
+@media screen and (max-width:768px) {
+
+
+
+}
+
+
+@media screen and (max-width:320px) {
+
+
+    
+
 }
