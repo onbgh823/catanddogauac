@@ -67,6 +67,9 @@
 }
 /* .logoNav h1 { 
     border:1px solid blue;} */
+
+.logoNav .open_nav { display:none } 
+.logoNav .close_nav { display:none } 
 .logoNav .nav {
     position: absolute;
     top: 55%; right: 50px;

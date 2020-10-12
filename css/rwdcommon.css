@@ -2,10 +2,7 @@
 
 
 @media screen and (max-width:1299px) {
-    .row {
-        padding: 0 10px
-    }
-   
+
     
 }
 
@@ -14,7 +11,7 @@
     
     .logoNav {
         position: relative;
-        height: 170px;
+        height: 160px;
     }
     .logoNav h1 {text-align: center;}
     .logoNav .nav {
@@ -24,17 +21,101 @@
     }
     .logoNav .nav .depth1 { text-align:center }
 
+    .logoNav .nav .depth1 > li {
+        display: inline-block;
+        position: relative;
+        /* padding: 30px 25px; */
+        /* background: red; */
+        width: 110px;
+        height: 90px;
+        /* border: 1px solid blue; */
+    }
     
+
+    .infocom {height: 220px; 
+        border: 1px solid blue;
+    }
+    .infocom li {
+        display: inline-block;
+        list-style: none;
+        color: #e0e0e0;
+        width: 19%;
+        position: relative;
+        /* position: absolute; top: 50%; left: 50%;
+        transform: translateY(-50%, -50%); */
+        padding-left: 40px ;
+        /* border:1px solid red */
+    }
+    /* .infocom li:nth-child(1) {
+        padding-left: 130px ;
+    } */
+    .infocom li h1 {
+        font-size: 14px;
+        padding: 25px 0;
+        text-align: left;
+    }
+    .infocom li:nth-child(1) .space {
+        text-indent: 30px;
+    }
+    .infocom ul li > p {
+        font-size: 12px;
+        position: absolute;
+        top: 100%; 
+        line-height: 2;
+        /* background: brown; */
+        /* margin: 0 20px; */width: 100%;
+        text-align: left;
+    }
+    .infocom li > p span {
+        display: inline-block;
+    }
+    /* =================================== */
+    .copyR_et_sns {
+        width: 100%;
+        display: inline-block;
+        position: relative;
+        }
+    .copyR {
+        padding-bottom: 30px;
+    }
+    .copyR span {
+        color: #e0e0e0;
+        display: block;
+        text-align: left;
+        font-size: 12px;
+        text-align: center;
+        line-height: 1.5;
+    }
+
 }
 
-@media screen and (max-width:1005px) {
 
+@media screen and (max-width:767px) {
+
+    .logoNav {
+        position: relative;
+        height: 90px;
+    }
+    .logoNav h1 {text-align: left;}
+    .logoNav .nav {
+        position: relative;
+        top: 25%; right: 0px;
+        z-index: 99999999;
+        display: none;  
+    }
+    .logoNav .open_nav { display:block; position:absolute; top:35px; right:20px; font-size:30px } 
+    .logoNav .close_nav { display:none; position:absolute; top:35px; right:20px; font-size:30px  }
     
-}
-
-@media screen and (max-width:768px) {
-
-
+    
+    .logoNav .nav .depth1 > li {
+        display: inline-block;
+        position: relative;
+        /* padding: 30px 25px; */
+        /* background: red; */
+        width: 90px;
+        height: 90px;
+        /* border: 1px solid blue; */
+    }
 
 }
 
@@ -42,6 +123,47 @@
 @media screen and (max-width:320px) {
 
 
-    
+    .underground {width: 100%;
+        background: #1f1f1f; text-align: center;
+        height: 400px;}
+        .under_menu .under_tab {
+            text-align: center;
+        }
+        .under_menu .under_tab a {
+            font-size: 12px;
+            display: inline-block;
+            padding: 30px 10px;
+            color: #e0e0e0;
+            text-align: center;
+            position: relative;
+        }
+        .under_menu .under_tab a:hover {
+            color: tomato;
+        }
+        .under_menu .under_tab a:hover::before {
+            color: #e0e0e0;
+        }
+        .under_menu .under_tab a::before {
+            content: '|'; position: absolute;
+            top: 50%; left: 0;
+            transform: translateY(-50%);
+        }
+        .under_menu .under_tab a:nth-child(1)::before{
+            display: none;
+        }
+
+
+
+    .infocom li {
+        display: inline-block;
+        list-style: none;
+        color: #e0e0e0;
+        width: 19%;
+        position: relative;
+        /* position: absolute; top: 50%; left: 50%;
+        transform: translateY(-50%, -50%); */
+        padding-left: 40px ;
+        /* border:1px solid red */
+    }
 
 }
